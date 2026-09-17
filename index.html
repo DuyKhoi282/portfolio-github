@@ -204,11 +204,9 @@
             <h1 class="font-heading text-4xl sm:text-5xl lg:text-[50px] font-extrabold text-slate-900 tracking-tight leading-tight">
               Hi, I'm <span class="bg-gradient-to-r from-brand-600 via-blue-600 to-accent-cyan bg-clip-text text-transparent">Tran Quoc Duy Khoi</span>
             </h1>
-            <p class="font-heading text-xl sm:text-2xl font-bold text-slate-800 flex items-center gap-2 flex-wrap">
-              <span>Java Backend Developer Intern</span>
-              <span class="text-brand-500 hidden sm:inline">•</span>
-              <span class="text-sm font-mono font-bold text-emerald-900 bg-emerald-100 px-3 py-1 rounded-md border border-emerald-300 shadow-2xs">Spring MVC</span>
-            </p>
+            <div class="font-heading text-xl sm:text-2xl font-bold text-slate-800 min-h-[38px] flex items-center flex-wrap">
+              <span id="typewriter-text" class="text-brand-600 font-extrabold tracking-tight">Java Backend Developer Intern</span><span id="typewriter-cursor" class="inline-block w-[3px] h-6 bg-brand-600 ml-1 rounded-full animate-pulse"></span>
+            </div>
           </div>
           <p class="text-base sm:text-lg text-slate-700 max-w-xl leading-relaxed">
             Fourth-year Information Technology student at <strong class="text-slate-900 font-extrabold">UEF</strong> passionate about Java backend development, Spring Framework, databases, and building robust, practical software applications.
@@ -224,14 +222,10 @@
               <span>Contact Me</span><span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </a>
           </div>
-          <div class="grid grid-cols-3 gap-4 pt-4 border-t-2 border-slate-200 w-full font-mono text-xs">
+          <div class="grid grid-cols-2 gap-4 pt-4 border-t-2 border-slate-200 w-full font-mono text-xs">
             <div class="p-3.5 rounded-xl bg-white border-2 border-slate-200 shadow-xs hover:border-brand-500 hover:shadow-md transition-all">
               <span class="text-[10px] text-slate-500 uppercase tracking-wider block font-bold">Core Specialty</span>
               <span class="text-brand-600 font-extrabold text-sm">Java / Spring</span>
-            </div>
-            <div class="p-3.5 rounded-xl bg-white border-2 border-slate-200 shadow-xs hover:border-brand-500 hover:shadow-md transition-all">
-              <span class="text-[10px] text-slate-500 uppercase tracking-wider block font-bold">Architecture</span>
-              <span class="text-slate-900 font-extrabold text-sm">MVC / DAO</span>
             </div>
             <div class="p-3.5 rounded-xl bg-white border-2 border-slate-200 shadow-xs hover:border-brand-500 hover:shadow-md transition-all">
               <span class="text-[10px] text-slate-500 uppercase tracking-wider block font-bold">Location</span>
@@ -474,43 +468,68 @@
             </div>
           </div>
           <!-- Project Visual Gallery (VoyagerElite) -->
-          <div class="flex flex-col gap-2.5">
-            <div class="rounded-xl overflow-hidden border-2 border-slate-300 shadow-md relative group bg-slate-950">
-              <img id="tour-gallery-img" src="assets/voyager-elite/booking-flow.png" alt="VoyagerElite UI Screenshot" class="w-full h-56 sm:h-80 object-cover object-top transition-opacity duration-200 cursor-pointer" onclick="openProjectDetails('tour')" />
-              
-              <!-- Left / Right Navigation Buttons -->
-              <button onclick="prevGallery('tour')" aria-label="Previous image" class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white flex items-center justify-center backdrop-blur-xs border border-white/20 shadow-md transition-all active:scale-90 cursor-pointer" type="button">
-                <span class="material-symbols-outlined text-[20px]">chevron_left</span>
-              </button>
-              <button onclick="nextGallery('tour')" aria-label="Next image" class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white flex items-center justify-center backdrop-blur-xs border border-white/20 shadow-md transition-all active:scale-90 cursor-pointer" type="button">
-                <span class="material-symbols-outlined text-[20px]">chevron_right</span>
-              </button>
-
-              <!-- Gallery Counter & Badge -->
-              <div class="absolute top-3 right-3 bg-slate-900/85 backdrop-blur-xs px-2.5 py-1 rounded-md text-[11px] font-mono font-bold text-white border border-white/20 shadow-xs">
-                <span id="tour-gallery-counter">1 / 6</span> &bull; Gallery
+          <div class="flex flex-col gap-3">
+            <div class="rounded-2xl overflow-hidden border-2 border-slate-300 shadow-lg relative group bg-slate-950 transition-all duration-300 hover:border-emerald-500">
+              <!-- Window Chrome Header -->
+              <div class="bg-slate-900/95 border-b border-white/10 px-4 py-2.5 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500/80 inline-block"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block"></span>
+                  <span class="ml-2 font-mono text-[11px] font-bold text-slate-400 hidden sm:inline">voyager-elite // spring-mvc-portal</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-950/80 text-emerald-400 border border-emerald-800">
+                    <span id="tour-gallery-counter">1 / 6</span> &bull; Interactive Showcase
+                  </span>
+                </div>
               </div>
 
-              <!-- Caption Banner -->
-              <div class="absolute bottom-3 left-3 right-3 bg-slate-900/90 backdrop-blur-xs px-3.5 py-2 rounded-lg text-xs font-mono font-bold text-white shadow-md border border-white/20 flex items-center justify-between gap-2">
-                <div class="flex items-center gap-2 truncate">
-                  <span class="material-symbols-outlined text-[16px] text-emerald-400 flex-shrink-0">collections</span>
-                  <span id="tour-gallery-caption" class="truncate">Tour Booking Interface &mdash; Form &amp; Dynamic Price (Lead by Duy Khôi)</span>
-                </div>
-                <button onclick="openProjectDetails('tour')" class="flex-shrink-0 text-[11px] text-emerald-400 hover:underline flex items-center gap-0.5 cursor-pointer font-sans font-semibold">
-                  <span>Full View</span><span class="material-symbols-outlined text-[14px]">open_in_full</span>
+              <!-- Main Canvas Area with object-contain (NO CROPPING / NO ZOOM CUT-OFF) -->
+              <div class="relative w-full h-[320px] sm:h-[420px] lg:h-[460px] bg-gradient-to-b from-slate-900 to-slate-950 flex items-center justify-center p-3 sm:p-5 overflow-hidden">
+                <img id="tour-gallery-img" src="assets/voyager-elite/booking-flow.png" alt="VoyagerElite UI Screenshot" class="max-w-full max-h-full w-auto h-auto object-contain rounded-lg shadow-2xl transition-all duration-300 cursor-pointer hover:scale-[1.01]" onclick="openProjectDetails('tour')" />
+
+                <!-- Navigation Arrows -->
+                <button onclick="prevGallery('tour')" aria-label="Previous image" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-slate-900/85 hover:bg-emerald-600 text-white flex items-center justify-center backdrop-blur-md border border-white/20 shadow-xl transition-all active:scale-90 cursor-pointer opacity-90 group-hover:opacity-100" type="button">
+                  <span class="material-symbols-outlined text-[22px]">chevron_left</span>
                 </button>
+                <button onclick="nextGallery('tour')" aria-label="Next image" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-slate-900/85 hover:bg-emerald-600 text-white flex items-center justify-center backdrop-blur-md border border-white/20 shadow-xl transition-all active:scale-90 cursor-pointer opacity-90 group-hover:opacity-100" type="button">
+                  <span class="material-symbols-outlined text-[22px]">chevron_right</span>
+                </button>
+
+                <!-- Caption Banner -->
+                <div class="absolute bottom-3 left-3 right-3 bg-slate-900/90 backdrop-blur-md px-4 py-2.5 rounded-xl text-xs font-mono font-bold text-white shadow-xl border border-white/15 flex items-center justify-between gap-3">
+                  <div class="flex items-center gap-2.5 truncate">
+                    <span class="material-symbols-outlined text-[18px] text-emerald-400 flex-shrink-0">collections</span>
+                    <span id="tour-gallery-caption" class="truncate font-sans text-xs sm:text-sm font-semibold">Tour Booking Interface &mdash; Form &amp; Dynamic Price (Lead by Duy Khôi)</span>
+                  </div>
+                  <button onclick="openProjectDetails('tour')" class="flex-shrink-0 text-xs text-emerald-400 hover:text-emerald-300 hover:underline flex items-center gap-1 cursor-pointer font-sans font-bold">
+                    <span>Phóng to</span><span class="material-symbols-outlined text-[15px]">open_in_full</span>
+                  </button>
+                </div>
               </div>
             </div>
 
             <!-- Thumbnail Carousel Bar -->
-            <div class="flex items-center gap-2 overflow-x-auto pb-1 pt-0.5">
-              <img src="assets/voyager-elite/booking-flow.png" onclick="setGalleryImage('tour', 0)" class="tour-thumb w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg border-2 border-slate-300 cursor-pointer transition-all hover:opacity-100 ring-2 ring-brand-600 border-transparent scale-[1.03]" title="Booking Interface (Duy Khôi)" alt="Booking Flow" />
-              <img src="assets/voyager-elite/booking-management.png" onclick="setGalleryImage('tour', 1)" class="tour-thumb w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg border-2 border-slate-300 cursor-pointer transition-all hover:opacity-100 opacity-60" title="Booking Management Console (Duy Khôi)" alt="Booking Console" />
-              <img src="assets/voyager-elite/payment-management.png" onclick="setGalleryImage('tour', 2)" class="tour-thumb w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg border-2 border-slate-300 cursor-pointer transition-all hover:opacity-100 opacity-60" title="Payment Management Console (Duy Khôi)" alt="Payment Console" />
-              <img src="assets/voyager-elite/home-page.png" onclick="setGalleryImage('tour', 3)" class="tour-thumb w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg border-2 border-slate-300 cursor-pointer transition-all hover:opacity-100 opacity-60" title="VoyagerElite Home Portal" alt="Home Page" />
-              <img src="assets/voyager-elite/tour-detail.png" onclick="setGalleryImage('tour', 4)" class="tour-thumb w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg border-2 border-slate-300 cursor-pointer transition-all hover:opacity-100 opacity-60" title="Tour Detail & Schedule" alt="Tour Detail" />
-              <img src="assets/voyager-elite/booking-history.png" onclick="setGalleryImage('tour', 5)" class="tour-thumb w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg border-2 border-slate-300 cursor-pointer transition-all hover:opacity-100 opacity-60" title="Customer Booking History" alt="Booking History" />
+            <div class="flex items-center gap-2.5 overflow-x-auto pb-1 pt-0.5">
+              <div onclick="setGalleryImage('tour', 0)" class="tour-thumb flex-shrink-0 w-22 h-15 sm:w-26 sm:h-17 bg-slate-900 rounded-lg border-2 border-slate-300 p-1 cursor-pointer transition-all hover:opacity-100 ring-2 ring-brand-600 border-transparent scale-[1.03]" title="Booking Interface (Duy Khôi)">
+                <img src="assets/voyager-elite/booking-flow.png" class="w-full h-full object-contain rounded" alt="Booking Flow" />
+              </div>
+              <div onclick="setGalleryImage('tour', 1)" class="tour-thumb flex-shrink-0 w-22 h-15 sm:w-26 sm:h-17 bg-slate-900 rounded-lg border-2 border-slate-300 p-1 cursor-pointer transition-all hover:opacity-100 opacity-60" title="Booking Management Console (Duy Khôi)">
+                <img src="assets/voyager-elite/booking-management.png" class="w-full h-full object-contain rounded" alt="Booking Console" />
+              </div>
+              <div onclick="setGalleryImage('tour', 2)" class="tour-thumb flex-shrink-0 w-22 h-15 sm:w-26 sm:h-17 bg-slate-900 rounded-lg border-2 border-slate-300 p-1 cursor-pointer transition-all hover:opacity-100 opacity-60" title="Payment Management Console (Duy Khôi)">
+                <img src="assets/voyager-elite/payment-management.png" class="w-full h-full object-contain rounded" alt="Payment Console" />
+              </div>
+              <div onclick="setGalleryImage('tour', 3)" class="tour-thumb flex-shrink-0 w-22 h-15 sm:w-26 sm:h-17 bg-slate-900 rounded-lg border-2 border-slate-300 p-1 cursor-pointer transition-all hover:opacity-100 opacity-60" title="VoyagerElite Home Portal">
+                <img src="assets/voyager-elite/home-page.png" class="w-full h-full object-contain rounded" alt="Home Page" />
+              </div>
+              <div onclick="setGalleryImage('tour', 4)" class="tour-thumb flex-shrink-0 w-22 h-15 sm:w-26 sm:h-17 bg-slate-900 rounded-lg border-2 border-slate-300 p-1 cursor-pointer transition-all hover:opacity-100 opacity-60" title="Tour Detail & Schedule">
+                <img src="assets/voyager-elite/tour-detail.png" class="w-full h-full object-contain rounded" alt="Tour Detail" />
+              </div>
+              <div onclick="setGalleryImage('tour', 5)" class="tour-thumb flex-shrink-0 w-22 h-15 sm:w-26 sm:h-17 bg-slate-900 rounded-lg border-2 border-slate-300 p-1 cursor-pointer transition-all hover:opacity-100 opacity-60" title="Customer Booking History">
+                <img src="assets/voyager-elite/booking-history.png" class="w-full h-full object-contain rounded" alt="Booking History" />
+              </div>
             </div>
           </div>
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
@@ -569,44 +588,71 @@
             </div>
           </div>
           <!-- Project Visual Gallery (The Chill Rest.) -->
-          <div class="flex flex-col gap-2.5">
-            <div class="rounded-xl overflow-hidden border-2 border-slate-300 shadow-md relative group bg-slate-950">
-              <img id="restaurant-gallery-img" src="assets/the-chill-rest/menu-management.png" alt="The Chill Rest UI Screenshot" class="w-full h-56 sm:h-80 object-cover object-top transition-opacity duration-200 cursor-pointer" onclick="openProjectDetails('restaurant')" />
-              
-              <!-- Left / Right Navigation Buttons -->
-              <button onclick="prevGallery('restaurant')" aria-label="Previous image" class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white flex items-center justify-center backdrop-blur-xs border border-white/20 shadow-md transition-all active:scale-90 cursor-pointer" type="button">
-                <span class="material-symbols-outlined text-[20px]">chevron_left</span>
-              </button>
-              <button onclick="nextGallery('restaurant')" aria-label="Next image" class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white flex items-center justify-center backdrop-blur-xs border border-white/20 shadow-md transition-all active:scale-90 cursor-pointer" type="button">
-                <span class="material-symbols-outlined text-[20px]">chevron_right</span>
-              </button>
-
-              <!-- Gallery Counter & Badge -->
-              <div class="absolute top-3 right-3 bg-slate-900/85 backdrop-blur-xs px-2.5 py-1 rounded-md text-[11px] font-mono font-bold text-white border border-white/20 shadow-xs">
-                <span id="restaurant-gallery-counter">1 / 7</span> &bull; Gallery
+          <div class="flex flex-col gap-3">
+            <div class="rounded-2xl overflow-hidden border-2 border-slate-300 shadow-lg relative group bg-slate-950 transition-all duration-300 hover:border-cyan-500">
+              <!-- Window Chrome Header -->
+              <div class="bg-slate-900/95 border-b border-white/10 px-4 py-2.5 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500/80 inline-block"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block"></span>
+                  <span class="ml-2 font-mono text-[11px] font-bold text-slate-400 hidden sm:inline">the-chill-rest // winforms-pos-architecture</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-cyan-950/80 text-cyan-400 border border-cyan-800">
+                    <span id="restaurant-gallery-counter">1 / 7</span> &bull; Interactive Showcase
+                  </span>
+                </div>
               </div>
 
-              <!-- Caption Banner -->
-              <div class="absolute bottom-3 left-3 right-3 bg-slate-900/90 backdrop-blur-xs px-3.5 py-2 rounded-lg text-xs font-mono font-bold text-white shadow-md border border-white/20 flex items-center justify-between gap-2">
-                <div class="flex items-center gap-2 truncate">
-                  <span class="material-symbols-outlined text-[16px] text-cyan-400 flex-shrink-0">collections</span>
-                  <span id="restaurant-gallery-caption" class="truncate">Menu Management (frmItemManagement) &mdash; Live DataGrid &amp; Search (Lead by Duy Khôi)</span>
-                </div>
-                <button onclick="openProjectDetails('restaurant')" class="flex-shrink-0 text-[11px] text-cyan-400 hover:underline flex items-center gap-0.5 cursor-pointer font-sans font-semibold">
-                  <span>Full View</span><span class="material-symbols-outlined text-[14px]">open_in_full</span>
+              <!-- Main Canvas Area with object-contain (NO CROPPING / NO ZOOM CUT-OFF) -->
+              <div class="relative w-full h-[320px] sm:h-[420px] lg:h-[460px] bg-gradient-to-b from-slate-900 to-slate-950 flex items-center justify-center p-3 sm:p-5 overflow-hidden">
+                <img id="restaurant-gallery-img" src="assets/the-chill-rest/menu-management.png" alt="The Chill Rest UI Screenshot" class="max-w-full max-h-full w-auto h-auto object-contain rounded-lg shadow-2xl transition-all duration-300 cursor-pointer hover:scale-[1.01]" onclick="openProjectDetails('restaurant')" />
+
+                <!-- Navigation Arrows -->
+                <button onclick="prevGallery('restaurant')" aria-label="Previous image" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-slate-900/85 hover:bg-cyan-600 text-white flex items-center justify-center backdrop-blur-md border border-white/20 shadow-xl transition-all active:scale-90 cursor-pointer opacity-90 group-hover:opacity-100" type="button">
+                  <span class="material-symbols-outlined text-[22px]">chevron_left</span>
                 </button>
+                <button onclick="nextGallery('restaurant')" aria-label="Next image" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-slate-900/85 hover:bg-cyan-600 text-white flex items-center justify-center backdrop-blur-md border border-white/20 shadow-xl transition-all active:scale-90 cursor-pointer opacity-90 group-hover:opacity-100" type="button">
+                  <span class="material-symbols-outlined text-[22px]">chevron_right</span>
+                </button>
+
+                <!-- Caption Banner -->
+                <div class="absolute bottom-3 left-3 right-3 bg-slate-900/90 backdrop-blur-md px-4 py-2.5 rounded-xl text-xs font-mono font-bold text-white shadow-xl border border-white/15 flex items-center justify-between gap-3">
+                  <div class="flex items-center gap-2.5 truncate">
+                    <span class="material-symbols-outlined text-[18px] text-cyan-400 flex-shrink-0">collections</span>
+                    <span id="restaurant-gallery-caption" class="truncate font-sans text-xs sm:text-sm font-semibold">Menu Management (frmItemManagement) &mdash; Live DataGrid &amp; Search (Lead by Duy Khôi)</span>
+                  </div>
+                  <button onclick="openProjectDetails('restaurant')" class="flex-shrink-0 text-xs text-cyan-400 hover:text-cyan-300 hover:underline flex items-center gap-1 cursor-pointer font-sans font-bold">
+                    <span>Phóng to</span><span class="material-symbols-outlined text-[15px]">open_in_full</span>
+                  </button>
+                </div>
               </div>
             </div>
 
             <!-- Thumbnail Carousel Bar -->
-            <div class="flex items-center gap-2 overflow-x-auto pb-1 pt-0.5">
-              <img src="assets/the-chill-rest/menu-management.png" onclick="setGalleryImage('restaurant', 0)" class="restaurant-thumb w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg border-2 border-slate-300 cursor-pointer transition-all hover:opacity-100 ring-2 ring-brand-600 border-transparent scale-[1.03]" title="Menu Management (frmItemManagement - Duy Khôi)" alt="Menu Management" />
-              <img src="assets/the-chill-rest/food-detail.png" onclick="setGalleryImage('restaurant', 1)" class="restaurant-thumb w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg border-2 border-slate-300 cursor-pointer transition-all hover:opacity-100 opacity-60" title="Food Detail &amp; Category Dialog (frmFoodDetail - Duy Khôi)" alt="Food Detail" />
-              <img src="assets/the-chill-rest/revenue-report.png" onclick="setGalleryImage('restaurant', 2)" class="restaurant-thumb w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg border-2 border-slate-300 cursor-pointer transition-all hover:opacity-100 opacity-60" title="Revenue Analysis &amp; Reports (frmMenuRevenue - Duy Khôi)" alt="Revenue Reports" />
-              <img src="assets/the-chill-rest/pos-dashboard.png" onclick="setGalleryImage('restaurant', 3)" class="restaurant-thumb w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg border-2 border-slate-300 cursor-pointer transition-all hover:opacity-100 opacity-60" title="POS Table Management Dashboard" alt="POS Dashboard" />
-              <img src="assets/the-chill-rest/class-diagram.png" onclick="setGalleryImage('restaurant', 4)" class="restaurant-thumb w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg border-2 border-slate-300 cursor-pointer transition-all hover:opacity-100 opacity-60" title="System Class Diagram (Designed by Duy Khôi)" alt="Class Diagram" />
-              <img src="assets/the-chill-rest/sequence-diagram.png" onclick="setGalleryImage('restaurant', 5)" class="restaurant-thumb w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg border-2 border-slate-300 cursor-pointer transition-all hover:opacity-100 opacity-60" title="Sequence Diagram: Order &amp; Payment (Designed by Duy Khôi)" alt="Sequence Diagram" />
-              <img src="assets/the-chill-rest/erd-diagram.png" onclick="setGalleryImage('restaurant', 6)" class="restaurant-thumb w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg border-2 border-slate-300 cursor-pointer transition-all hover:opacity-100 opacity-60" title="Entity Relationship Diagram (ERD - Duy Khôi)" alt="ERD Diagram" />
+            <div class="flex items-center gap-2.5 overflow-x-auto pb-1 pt-0.5">
+              <div onclick="setGalleryImage('restaurant', 0)" class="restaurant-thumb flex-shrink-0 w-22 h-15 sm:w-26 sm:h-17 bg-slate-900 rounded-lg border-2 border-slate-300 p-1 cursor-pointer transition-all hover:opacity-100 ring-2 ring-brand-600 border-transparent scale-[1.03]" title="Menu Management (frmItemManagement - Duy Khôi)">
+                <img src="assets/the-chill-rest/menu-management.png" class="w-full h-full object-contain rounded" alt="Menu Management" />
+              </div>
+              <div onclick="setGalleryImage('restaurant', 1)" class="restaurant-thumb flex-shrink-0 w-22 h-15 sm:w-26 sm:h-17 bg-slate-900 rounded-lg border-2 border-slate-300 p-1 cursor-pointer transition-all hover:opacity-100 opacity-60" title="Food Detail & Category Dialog (frmFoodDetail - Duy Khôi)">
+                <img src="assets/the-chill-rest/food-detail.png" class="w-full h-full object-contain rounded" alt="Food Detail" />
+              </div>
+              <div onclick="setGalleryImage('restaurant', 2)" class="restaurant-thumb flex-shrink-0 w-22 h-15 sm:w-26 sm:h-17 bg-slate-900 rounded-lg border-2 border-slate-300 p-1 cursor-pointer transition-all hover:opacity-100 opacity-60" title="Revenue Analysis & Reports (frmMenuRevenue - Duy Khôi)">
+                <img src="assets/the-chill-rest/revenue-report.png" class="w-full h-full object-contain rounded" alt="Revenue Reports" />
+              </div>
+              <div onclick="setGalleryImage('restaurant', 3)" class="restaurant-thumb flex-shrink-0 w-22 h-15 sm:w-26 sm:h-17 bg-slate-900 rounded-lg border-2 border-slate-300 p-1 cursor-pointer transition-all hover:opacity-100 opacity-60" title="POS Table Management Dashboard">
+                <img src="assets/the-chill-rest/pos-dashboard.png" class="w-full h-full object-contain rounded" alt="POS Dashboard" />
+              </div>
+              <div onclick="setGalleryImage('restaurant', 4)" class="restaurant-thumb flex-shrink-0 w-22 h-15 sm:w-26 sm:h-17 bg-slate-900 rounded-lg border-2 border-slate-300 p-1 cursor-pointer transition-all hover:opacity-100 opacity-60" title="System Class Diagram (Designed by Duy Khôi)">
+                <img src="assets/the-chill-rest/class-diagram.png" class="w-full h-full object-contain rounded" alt="Class Diagram" />
+              </div>
+              <div onclick="setGalleryImage('restaurant', 5)" class="restaurant-thumb flex-shrink-0 w-22 h-15 sm:w-26 sm:h-17 bg-slate-900 rounded-lg border-2 border-slate-300 p-1 cursor-pointer transition-all hover:opacity-100 opacity-60" title="Sequence Diagram: Order & Payment (Designed by Duy Khôi)">
+                <img src="assets/the-chill-rest/sequence-diagram.png" class="w-full h-full object-contain rounded" alt="Sequence Diagram" />
+              </div>
+              <div onclick="setGalleryImage('restaurant', 6)" class="restaurant-thumb flex-shrink-0 w-22 h-15 sm:w-26 sm:h-17 bg-slate-900 rounded-lg border-2 border-slate-300 p-1 cursor-pointer transition-all hover:opacity-100 opacity-60" title="Entity Relationship Diagram (ERD - Duy Khôi)">
+                <img src="assets/the-chill-rest/erd-diagram.png" class="w-full h-full object-contain rounded" alt="ERD Diagram" />
+              </div>
             </div>
           </div>
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
@@ -1095,8 +1141,10 @@
         github: 'https://github.com/vannld23/travel-tour-booking-system',
         html: `
           <div class="flex flex-col gap-4">
-            <div class="rounded-xl overflow-hidden border border-slate-200 shadow-xs relative bg-slate-950">
-              <img src="assets/voyager-elite/booking-flow.png" alt="VoyagerElite UI Preview" class="w-full h-56 sm:h-64 object-cover object-top" />
+            <div class="rounded-xl overflow-hidden border border-slate-800 shadow-md relative bg-slate-950">
+              <div class="w-full h-64 sm:h-80 bg-gradient-to-b from-slate-900 to-slate-950 flex items-center justify-center p-3">
+                <img src="assets/voyager-elite/booking-flow.png" alt="VoyagerElite UI Preview" class="max-w-full max-h-full w-auto h-auto object-contain rounded shadow-lg" />
+              </div>
               <div class="absolute bottom-2 left-2 bg-slate-900/85 backdrop-blur-xs text-white text-[11px] font-mono px-2.5 py-1 rounded border border-white/10">
                 Cat Ba Escape &bull; Booking &amp; Payment Console (Duy Khôi)
               </div>
@@ -1127,8 +1175,10 @@
         github: 'https://github.com/DuyKhoi282/Restaurant-App',
         html: `
           <div class="flex flex-col gap-4">
-            <div class="rounded-xl overflow-hidden border border-slate-200 shadow-xs relative bg-slate-950">
-              <img src="assets/the-chill-rest/menu-management.png" alt="The Chill Rest UI Preview" class="w-full h-56 sm:h-64 object-cover object-top" />
+            <div class="rounded-xl overflow-hidden border border-slate-800 shadow-md relative bg-slate-950">
+              <div class="w-full h-64 sm:h-80 bg-gradient-to-b from-slate-900 to-slate-950 flex items-center justify-center p-3">
+                <img src="assets/the-chill-rest/menu-management.png" alt="The Chill Rest UI Preview" class="max-w-full max-h-full w-auto h-auto object-contain rounded shadow-lg" />
+              </div>
               <div class="absolute bottom-2 left-2 bg-slate-900/85 backdrop-blur-xs text-white text-[11px] font-mono px-2.5 py-1 rounded border border-white/10">
                 The Chill Rest. &bull; Menu Management &amp; DataGrid (Lead by Duy Khôi)
               </div>
@@ -1194,11 +1244,13 @@
       const capEl = document.getElementById(project + '-gallery-caption');
       const countEl = document.getElementById(project + '-gallery-counter');
       if (imgEl) {
-        imgEl.style.opacity = '0.3';
+        imgEl.style.opacity = '0';
+        imgEl.style.transform = 'scale(0.97)';
         setTimeout(() => {
           imgEl.src = item.src;
           imgEl.style.opacity = '1';
-        }, 120);
+          imgEl.style.transform = 'scale(1)';
+        }, 140);
       }
       if (capEl) capEl.textContent = item.caption;
       if (countEl) countEl.textContent = `${index + 1} / ${list.length}`;
@@ -1228,6 +1280,45 @@
       if (prev < 0) prev = list.length - 1;
       setGalleryImage(project, prev);
     }
+
+    // --- Typewriter Text Animation ---
+    const typewriterPhrases = [
+      "Java Backend Developer Intern",
+      "Spring MVC & RESTful API Developer",
+      "Database Designer (MySQL & SQL Server)",
+      "3-Tier Desktop Architecture Engineer"
+    ];
+    let phraseIndex = 0;
+    let charIndex = typewriterPhrases[0].length;
+    let isDeleting = true;
+    const typewriterEl = document.getElementById('typewriter-text');
+
+    function typeWriterStep() {
+      if (!typewriterEl) return;
+      const currentPhrase = typewriterPhrases[phraseIndex];
+      
+      if (isDeleting) {
+        charIndex--;
+        typewriterEl.textContent = currentPhrase.substring(0, charIndex);
+        if (charIndex <= 0) {
+          isDeleting = false;
+          phraseIndex = (phraseIndex + 1) % typewriterPhrases.length;
+          setTimeout(typeWriterStep, 450);
+          return;
+        }
+        setTimeout(typeWriterStep, 35);
+      } else {
+        charIndex++;
+        typewriterEl.textContent = currentPhrase.substring(0, charIndex);
+        if (charIndex >= currentPhrase.length) {
+          isDeleting = true;
+          setTimeout(typeWriterStep, 2000);
+          return;
+        }
+        setTimeout(typeWriterStep, 70);
+      }
+    }
+    setTimeout(typeWriterStep, 2200);
 
     // Scroll Reveal Intersection Observer
     const revealObserver = new IntersectionObserver((entries) => {
