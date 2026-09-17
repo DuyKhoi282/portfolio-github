@@ -331,7 +331,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
         <div class="lg:col-span-6 p-6 sm:p-7 rounded-2xl elevated-card flex flex-col gap-5 reveal delay-100">
           <div class="flex items-center gap-4 pb-4 border-b border-slate-200">
-            <img src="assets/avatar.jpg" alt="Tran Quoc Duy Khoi" class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl object-cover border-2 border-brand-500 shadow-md ring-4 ring-brand-100 flex-shrink-0" />
+            <img src="assets/avatar.jpg" alt="Tran Quoc Duy Khoi" class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl object-cover object-[center_35%] border-2 border-brand-500 shadow-md ring-4 ring-brand-100 flex-shrink-0" />
             <div>
               <h3 class="font-heading font-extrabold text-slate-900 text-lg sm:text-xl">Tran Quoc Duy Khoi</h3>
               <p class="font-mono text-xs text-brand-700 font-bold flex items-center gap-1.5 mt-0.5">
@@ -502,7 +502,7 @@
 
                 <!-- Main Canvas Area -->
                 <div class="relative w-full h-64 sm:h-72 lg:h-[285px] bg-gradient-to-b from-slate-900 to-slate-950 flex items-center justify-center p-3 overflow-hidden">
-                  <img id="tour-gallery-img" src="assets/voyager-elite/booking-flow.png" alt="VoyagerElite UI Screenshot" class="max-w-full max-h-full w-auto h-auto object-contain rounded shadow-lg transition-all duration-300 cursor-pointer hover:scale-[1.01]" onclick="openProjectDetails('tour')" />
+                  <img id="tour-gallery-img" src="assets/voyager-elite/booking-flow.png" alt="VoyagerElite UI Screenshot" class="max-w-full max-h-full w-auto h-auto object-contain rounded shadow-lg transition-all duration-300 cursor-pointer hover:scale-[1.01]" onclick="openImageLightbox('tour')" title="Bấm để phóng to ảnh toàn màn hình" />
 
                   <!-- Navigation Arrows -->
                   <button onclick="prevGallery('tour')" aria-label="Previous image" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-900/85 hover:bg-emerald-600 text-white flex items-center justify-center backdrop-blur-md border border-white/20 shadow-md transition-all active:scale-90 cursor-pointer opacity-90 group-hover:opacity-100" type="button">
@@ -518,7 +518,7 @@
                       <span class="material-symbols-outlined text-[15px] text-emerald-400 flex-shrink-0">collections</span>
                       <span id="tour-gallery-caption" class="truncate font-sans text-xs font-medium">Tour Booking Interface (Lead by Duy Khôi)</span>
                     </div>
-                    <button onclick="openProjectDetails('tour')" class="flex-shrink-0 text-xs text-emerald-400 hover:text-emerald-300 hover:underline flex items-center gap-0.5 cursor-pointer font-sans font-bold">
+                    <button onclick="openImageLightbox('tour')" class="flex-shrink-0 text-xs text-emerald-400 hover:text-emerald-300 hover:underline flex items-center gap-0.5 cursor-pointer font-sans font-bold" type="button" title="Phóng to ảnh toàn màn hình">
                       <span>Phóng to</span><span class="material-symbols-outlined text-[13px]">open_in_full</span>
                     </button>
                   </div>
@@ -651,7 +651,7 @@
 
                 <!-- Main Canvas Area -->
                 <div class="relative w-full h-64 sm:h-72 lg:h-[285px] bg-gradient-to-b from-slate-900 to-slate-950 flex items-center justify-center p-3 overflow-hidden">
-                  <img id="restaurant-gallery-img" src="assets/the-chill-rest/menu-management.png" alt="The Chill Rest UI Screenshot" class="max-w-full max-h-full w-auto h-auto object-contain rounded shadow-lg transition-all duration-300 cursor-pointer hover:scale-[1.01]" onclick="openProjectDetails('restaurant')" />
+                  <img id="restaurant-gallery-img" src="assets/the-chill-rest/menu-management.png" alt="The Chill Rest UI Screenshot" class="max-w-full max-h-full w-auto h-auto object-contain rounded shadow-lg transition-all duration-300 cursor-pointer hover:scale-[1.01]" onclick="openImageLightbox('restaurant')" title="Bấm để phóng to ảnh toàn màn hình" />
 
                   <!-- Navigation Arrows -->
                   <button onclick="prevGallery('restaurant')" aria-label="Previous image" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-900/85 hover:bg-cyan-600 text-white flex items-center justify-center backdrop-blur-md border border-white/20 shadow-md transition-all active:scale-90 cursor-pointer opacity-90 group-hover:opacity-100" type="button">
@@ -667,7 +667,7 @@
                       <span class="material-symbols-outlined text-[15px] text-cyan-400 flex-shrink-0">collections</span>
                       <span id="restaurant-gallery-caption" class="truncate font-sans text-xs font-medium">Menu Management (Lead by Duy Khôi)</span>
                     </div>
-                    <button onclick="openProjectDetails('restaurant')" class="flex-shrink-0 text-xs text-cyan-400 hover:text-cyan-300 hover:underline flex items-center gap-0.5 cursor-pointer font-sans font-bold">
+                    <button onclick="openImageLightbox('restaurant')" class="flex-shrink-0 text-xs text-cyan-400 hover:text-cyan-300 hover:underline flex items-center gap-0.5 cursor-pointer font-sans font-bold" type="button" title="Phóng to ảnh toàn màn hình">
                       <span>Phóng to</span><span class="material-symbols-outlined text-[13px]">open_in_full</span>
                     </button>
                   </div>
@@ -873,6 +873,43 @@
     </button>
   </aside>
 
+  <!-- IMAGE LIGHTBOX MODAL (TRUE FULLSCREEN IMAGE ENLARGE & ZOOM) -->
+  <div id="image-lightbox-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-2 sm:p-4 md:p-6 bg-slate-950/92 backdrop-blur-md transition-all duration-300" onclick="if(event.target === this) closeLightboxModal()">
+    <div class="relative w-full max-w-5xl max-h-[95vh] flex flex-col items-center justify-center animate-in fade-in zoom-in-95 duration-200">
+      <!-- Top Bar: Title & Counter & Close -->
+      <div class="w-full flex items-center justify-between py-2.5 px-4 bg-slate-900/95 border border-white/15 rounded-t-2xl text-white backdrop-blur-md">
+        <div class="flex items-center gap-2 truncate">
+          <span class="material-symbols-outlined text-emerald-400 text-[20px]">zoom_in</span>
+          <span id="lightbox-title" class="font-heading font-extrabold text-xs sm:text-sm text-white truncate">VoyagerElite Travel Tour System</span>
+          <span id="lightbox-counter" class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-white/10 text-slate-300 font-bold ml-1">1 / 6</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="closeLightboxModal()" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-rose-600 text-white flex items-center justify-center transition-colors cursor-pointer" type="button" title="Đóng (Esc)">
+            <span class="material-symbols-outlined text-[20px]">close</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Canvas -->
+      <div class="relative w-full bg-slate-950 border-x border-white/10 flex items-center justify-center p-2 sm:p-4 max-h-[80vh] overflow-hidden">
+        <img id="lightbox-img" src="" alt="Enlarged screenshot" class="max-w-full max-h-[76vh] w-auto h-auto object-contain rounded-lg shadow-2xl transition-all duration-200 select-none" />
+
+        <!-- Lightbox Prev / Next Chevrons -->
+        <button onclick="lightboxPrev()" class="absolute left-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-slate-900/85 hover:bg-brand-600 text-white flex items-center justify-center backdrop-blur-md border border-white/20 shadow-2xl transition-all active:scale-90 cursor-pointer" type="button" title="Ảnh trước (Mũi tên trái)">
+          <span class="material-symbols-outlined text-[26px]">chevron_left</span>
+        </button>
+        <button onclick="lightboxNext()" class="absolute right-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-slate-900/85 hover:bg-brand-600 text-white flex items-center justify-center backdrop-blur-md border border-white/20 shadow-2xl transition-all active:scale-90 cursor-pointer" type="button" title="Ảnh tiếp theo (Mũi tên phải)">
+          <span class="material-symbols-outlined text-[26px]">chevron_right</span>
+        </button>
+      </div>
+
+      <!-- Bottom Caption Bar -->
+      <div class="w-full py-2.5 px-4 bg-slate-900/95 border border-white/15 rounded-b-2xl text-center text-xs sm:text-sm font-sans font-semibold text-slate-200 backdrop-blur-md">
+        <span id="lightbox-caption"></span>
+      </div>
+    </div>
+  </div>
+
   <!-- PROJECT MODAL -->
   <div id="project-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
     <div class="bg-white w-full max-w-2xl rounded-2xl border border-slate-200 shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
@@ -1034,12 +1071,34 @@
       }
     }
 
-    // Keyboard Arrow navigation (← / → and ↑ / ↓)
+    // Keyboard Arrow navigation (← / → and ↑ / ↓) & Modal Controls
     window.addEventListener('keydown', (e) => {
       if (['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) return;
+
+      const lightboxEl = document.getElementById('image-lightbox-modal');
+      if (lightboxEl && !lightboxEl.classList.contains('hidden')) {
+        if (e.key === 'Escape') {
+          e.preventDefault();
+          closeLightboxModal();
+        } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+          e.preventDefault();
+          lightboxNext();
+        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+          e.preventDefault();
+          lightboxPrev();
+        }
+        return;
+      }
+
       const modalOpen = !document.getElementById('project-modal').classList.contains('hidden') ||
                         !document.getElementById('resume-modal').classList.contains('hidden');
-      if (modalOpen) return;
+      if (modalOpen) {
+        if (e.key === 'Escape') {
+          closeProjectModal();
+          closeResumeModal();
+        }
+        return;
+      }
 
       if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
         e.preventDefault();
@@ -1259,6 +1318,12 @@
           dot.className = `${project}-dot w-1.5 h-1.5 rounded-full bg-white/40 hover:bg-white transition-all cursor-pointer`;
         }
       });
+
+      // Synchronize fullscreen Lightbox if currently open
+      const lightboxEl = document.getElementById('image-lightbox-modal');
+      if (lightboxEl && !lightboxEl.classList.contains('hidden') && currentLightboxProject === project) {
+        updateLightboxContent(project, index);
+      }
     }
 
     function nextGallery(project) {
@@ -1273,6 +1338,56 @@
       let prev = currentGalleryIndex[project] - 1;
       if (prev < 0) prev = list.length - 1;
       setGalleryImage(project, prev);
+    }
+
+    // --- Image Lightbox (True Image Zoom & Enlarge) ---
+    let currentLightboxProject = 'tour';
+
+    function openImageLightbox(project) {
+      currentLightboxProject = project;
+      const list = galleries[project];
+      const idx = currentGalleryIndex[project] || 0;
+      if (!list || !list[idx]) return;
+
+      updateLightboxContent(project, idx);
+      document.getElementById('image-lightbox-modal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightboxModal() {
+      document.getElementById('image-lightbox-modal').classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    function updateLightboxContent(project, idx) {
+      const list = galleries[project];
+      if (!list || !list[idx]) return;
+      const item = list[idx];
+      const imgEl = document.getElementById('lightbox-img');
+      const capEl = document.getElementById('lightbox-caption');
+      const countEl = document.getElementById('lightbox-counter');
+      const titleEl = document.getElementById('lightbox-title');
+
+      if (imgEl) {
+        imgEl.style.opacity = '0';
+        imgEl.style.transform = 'scale(0.97)';
+        setTimeout(() => {
+          imgEl.src = item.src;
+          imgEl.style.opacity = '1';
+          imgEl.style.transform = 'scale(1)';
+        }, 120);
+      }
+      if (capEl) capEl.textContent = item.caption;
+      if (countEl) countEl.textContent = `${idx + 1} / ${list.length}`;
+      if (titleEl) titleEl.textContent = project === 'tour' ? 'VoyagerElite – Travel Tour Booking System' : 'The Chill Rest. – Restaurant Management App';
+    }
+
+    function lightboxNext() {
+      nextGallery(currentLightboxProject);
+    }
+
+    function lightboxPrev() {
+      prevGallery(currentLightboxProject);
     }
 
     // --- Typewriter Text Animation ---
