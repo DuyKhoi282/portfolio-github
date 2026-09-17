@@ -67,7 +67,7 @@ To develop my career as a **Java Backend Developer** by continuously improving m
 ---
 
 ### 2. The Chill Rest. — Restaurant Management System
-> **Academic Project** • Role: *Solo Developer*  
+> **Academic Group Project**  
 > **Source Code:** [DuyKhoi282/Restaurant-App](https://github.com/DuyKhoi282/Restaurant-App)
 
 <div align="center">
