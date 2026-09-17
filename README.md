@@ -3,7 +3,7 @@
 <div align="center">
 
   <h3>👨‍💻 Java Backend Developer Intern</h3>
-  <p>Passionate 3rd-year IT student at the <strong>University of Economics and Finance (UEF)</strong>, specializing in Java backend development, Spring Framework, and relational database management systems.</p>
+  <p>Passionate 4th-year (final-year) IT student at the <strong>University of Economics and Finance (UEF)</strong>, specializing in Java backend development, Spring Framework, and relational database management systems.</p>
 
   <p>
     <a href="https://duykhoi-portfolio.netlify.app/"><img src="https://img.shields.io/badge/⚡_Live_Portfolio-Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify Live"></a>
@@ -88,7 +88,7 @@ To develop my career as a **Java Backend Developer** by continuously improving m
 
 - **University of Economics and Finance (UEF)**
   - *Bachelor of Information Technology* (2023 – Expected 2027)
-  - Year 3 Student • Focused on Software Engineering & Backend Architecture
+  - Year 4 (Final-year) Student • Focused on Software Engineering & Backend Architecture
 - **Certifications & Honors:**
   - 🏅 **Consolation Prize** — Cybernet Competition 2025 (UEF)
   - 🌐 **VSTEP English Proficiency Level 7.0** (2026)
