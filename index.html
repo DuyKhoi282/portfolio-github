@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="scroll-smooth" lang="en">
 <head>
   <meta charset="utf-8" />
@@ -473,12 +473,44 @@
               <span class="px-3 py-1 rounded-md bg-rose-100 border border-rose-300 font-mono text-xs font-bold text-rose-900">Maven</span>
             </div>
           </div>
-          <!-- Project Visual Preview -->
-          <div class="rounded-xl overflow-hidden border-2 border-slate-300 shadow-md relative group bg-slate-950">
-            <img src="assets/travel-tour-booking.png" alt="VoyagerElite Travel Tour Booking UI Preview" class="w-full h-48 sm:h-64 object-cover object-top opacity-95 group-hover:scale-[1.01] group-hover:opacity-100 transition-all duration-300 cursor-pointer" onclick="openProjectDetails('tour')" />
-            <div class="absolute bottom-3 left-3 bg-slate-900/90 backdrop-blur-xs px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold text-white shadow-md border border-white/20 flex items-center gap-2">
-              <span class="material-symbols-outlined text-[16px] text-emerald-400">web</span>
-              <span>VoyagerElite Portal Preview &bull; Spring MVC &amp; MySQL</span>
+          <!-- Project Visual Gallery (VoyagerElite) -->
+          <div class="flex flex-col gap-2.5">
+            <div class="rounded-xl overflow-hidden border-2 border-slate-300 shadow-md relative group bg-slate-950">
+              <img id="tour-gallery-img" src="assets/voyager-elite/booking-flow.png" alt="VoyagerElite UI Screenshot" class="w-full h-56 sm:h-80 object-cover object-top transition-opacity duration-200 cursor-pointer" onclick="openProjectDetails('tour')" />
+              
+              <!-- Left / Right Navigation Buttons -->
+              <button onclick="prevGallery('tour')" aria-label="Previous image" class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white flex items-center justify-center backdrop-blur-xs border border-white/20 shadow-md transition-all active:scale-90 cursor-pointer" type="button">
+                <span class="material-symbols-outlined text-[20px]">chevron_left</span>
+              </button>
+              <button onclick="nextGallery('tour')" aria-label="Next image" class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white flex items-center justify-center backdrop-blur-xs border border-white/20 shadow-md transition-all active:scale-90 cursor-pointer" type="button">
+                <span class="material-symbols-outlined text-[20px]">chevron_right</span>
+              </button>
+
+              <!-- Gallery Counter & Badge -->
+              <div class="absolute top-3 right-3 bg-slate-900/85 backdrop-blur-xs px-2.5 py-1 rounded-md text-[11px] font-mono font-bold text-white border border-white/20 shadow-xs">
+                <span id="tour-gallery-counter">1 / 6</span> &bull; Gallery
+              </div>
+
+              <!-- Caption Banner -->
+              <div class="absolute bottom-3 left-3 right-3 bg-slate-900/90 backdrop-blur-xs px-3.5 py-2 rounded-lg text-xs font-mono font-bold text-white shadow-md border border-white/20 flex items-center justify-between gap-2">
+                <div class="flex items-center gap-2 truncate">
+                  <span class="material-symbols-outlined text-[16px] text-emerald-400 flex-shrink-0">collections</span>
+                  <span id="tour-gallery-caption" class="truncate">Tour Booking Interface &mdash; Form &amp; Dynamic Price (Lead by Duy Khôi)</span>
+                </div>
+                <button onclick="openProjectDetails('tour')" class="flex-shrink-0 text-[11px] text-emerald-400 hover:underline flex items-center gap-0.5 cursor-pointer font-sans font-semibold">
+                  <span>Full View</span><span class="material-symbols-outlined text-[14px]">open_in_full</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Thumbnail Carousel Bar -->
+            <div class="flex items-center gap-2 overflow-x-auto pb-1 pt-0.5">
+              <img src="assets/voyager-elite/booking-flow.png" onclick="setGalleryImage('tour', 0)" class="tour-thumb w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg border-2 border-slate-300 cursor-pointer transition-all hover:opacity-100 ring-2 ring-brand-600 border-transparent scale-[1.03]" title="Booking Interface (Duy Khôi)" alt="Booking Flow" />
+              <img src="assets/voyager-elite/booking-management.png" onclick="setGalleryImage('tour', 1)" class="tour-thumb w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg border-2 border-slate-300 cursor-pointer transition-all hover:opacity-100 opacity-60" title="Booking Management Console (Duy Khôi)" alt="Booking Console" />
+              <img src="assets/voyager-elite/payment-management.png" onclick="setGalleryImage('tour', 2)" class="tour-thumb w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg border-2 border-slate-300 cursor-pointer transition-all hover:opacity-100 opacity-60" title="Payment Management Console (Duy Khôi)" alt="Payment Console" />
+              <img src="assets/voyager-elite/home-page.png" onclick="setGalleryImage('tour', 3)" class="tour-thumb w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg border-2 border-slate-300 cursor-pointer transition-all hover:opacity-100 opacity-60" title="VoyagerElite Home Portal" alt="Home Page" />
+              <img src="assets/voyager-elite/tour-detail.png" onclick="setGalleryImage('tour', 4)" class="tour-thumb w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg border-2 border-slate-300 cursor-pointer transition-all hover:opacity-100 opacity-60" title="Tour Detail & Schedule" alt="Tour Detail" />
+              <img src="assets/voyager-elite/booking-history.png" onclick="setGalleryImage('tour', 5)" class="tour-thumb w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg border-2 border-slate-300 cursor-pointer transition-all hover:opacity-100 opacity-60" title="Customer Booking History" alt="Booking History" />
             </div>
           </div>
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
@@ -491,10 +523,7 @@
                 <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[18px] mt-0.5 flex-shrink-0">check_circle</span><span>Structured codebase across Controller, Service, DAO, and Model layers.</span></li>
                 <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[18px] mt-0.5 flex-shrink-0">check_circle</span><span>Worked directly with MySQL schemas, parameter binding, and prepared statements.</span></li>
               </ul>
-              <div class="mt-2 p-4 rounded-xl bg-amber-50 border-2 border-amber-300 flex items-start gap-3">
-                <span class="material-symbols-outlined text-amber-600 text-[22px] mt-0.5 flex-shrink-0">info</span>
-                <p class="text-xs sm:text-sm text-amber-950 leading-relaxed font-semibold"><strong>Note:</strong> The payment module manages payment records only (Bank transfer, Visa, E-wallet options). No external payment gateway was implemented.</p>
-              </div>
+
             </div>
             <div class="lg:col-span-5 rounded-2xl border-2 border-slate-300 bg-white p-5 flex flex-col gap-2 shadow-xs">
               <span class="font-mono text-xs font-bold text-slate-600 uppercase tracking-wider mb-1">Multi-Tier Architecture Flow</span>
@@ -539,12 +568,45 @@
               <span class="px-3 py-1 rounded-md bg-emerald-100 border border-emerald-300 font-mono text-xs font-bold text-emerald-900">EPPlus</span>
             </div>
           </div>
-          <!-- Project Visual Preview -->
-          <div class="rounded-xl overflow-hidden border-2 border-slate-300 shadow-md relative group bg-slate-950">
-            <img src="assets/restaurant-management.png" alt="The Chill Rest Restaurant Management Desktop App Preview" class="w-full h-48 sm:h-64 object-cover object-top opacity-95 group-hover:scale-[1.01] group-hover:opacity-100 transition-all duration-300 cursor-pointer" onclick="openProjectDetails('restaurant')" />
-            <div class="absolute bottom-3 left-3 bg-slate-900/90 backdrop-blur-xs px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold text-white shadow-md border border-white/20 flex items-center gap-2">
-              <span class="material-symbols-outlined text-[16px] text-indigo-400">desktop_windows</span>
-              <span>The Chill Rest. Preview &bull; C# WinForms &amp; SQL Server</span>
+          <!-- Project Visual Gallery (The Chill Rest.) -->
+          <div class="flex flex-col gap-2.5">
+            <div class="rounded-xl overflow-hidden border-2 border-slate-300 shadow-md relative group bg-slate-950">
+              <img id="restaurant-gallery-img" src="assets/the-chill-rest/menu-management.png" alt="The Chill Rest UI Screenshot" class="w-full h-56 sm:h-80 object-cover object-top transition-opacity duration-200 cursor-pointer" onclick="openProjectDetails('restaurant')" />
+              
+              <!-- Left / Right Navigation Buttons -->
+              <button onclick="prevGallery('restaurant')" aria-label="Previous image" class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white flex items-center justify-center backdrop-blur-xs border border-white/20 shadow-md transition-all active:scale-90 cursor-pointer" type="button">
+                <span class="material-symbols-outlined text-[20px]">chevron_left</span>
+              </button>
+              <button onclick="nextGallery('restaurant')" aria-label="Next image" class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white flex items-center justify-center backdrop-blur-xs border border-white/20 shadow-md transition-all active:scale-90 cursor-pointer" type="button">
+                <span class="material-symbols-outlined text-[20px]">chevron_right</span>
+              </button>
+
+              <!-- Gallery Counter & Badge -->
+              <div class="absolute top-3 right-3 bg-slate-900/85 backdrop-blur-xs px-2.5 py-1 rounded-md text-[11px] font-mono font-bold text-white border border-white/20 shadow-xs">
+                <span id="restaurant-gallery-counter">1 / 7</span> &bull; Gallery
+              </div>
+
+              <!-- Caption Banner -->
+              <div class="absolute bottom-3 left-3 right-3 bg-slate-900/90 backdrop-blur-xs px-3.5 py-2 rounded-lg text-xs font-mono font-bold text-white shadow-md border border-white/20 flex items-center justify-between gap-2">
+                <div class="flex items-center gap-2 truncate">
+                  <span class="material-symbols-outlined text-[16px] text-cyan-400 flex-shrink-0">collections</span>
+                  <span id="restaurant-gallery-caption" class="truncate">Menu Management (frmItemManagement) &mdash; Live DataGrid &amp; Search (Lead by Duy Khôi)</span>
+                </div>
+                <button onclick="openProjectDetails('restaurant')" class="flex-shrink-0 text-[11px] text-cyan-400 hover:underline flex items-center gap-0.5 cursor-pointer font-sans font-semibold">
+                  <span>Full View</span><span class="material-symbols-outlined text-[14px]">open_in_full</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Thumbnail Carousel Bar -->
+            <div class="flex items-center gap-2 overflow-x-auto pb-1 pt-0.5">
+              <img src="assets/the-chill-rest/menu-management.png" onclick="setGalleryImage('restaurant', 0)" class="restaurant-thumb w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg border-2 border-slate-300 cursor-pointer transition-all hover:opacity-100 ring-2 ring-brand-600 border-transparent scale-[1.03]" title="Menu Management (frmItemManagement - Duy Khôi)" alt="Menu Management" />
+              <img src="assets/the-chill-rest/food-detail.png" onclick="setGalleryImage('restaurant', 1)" class="restaurant-thumb w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg border-2 border-slate-300 cursor-pointer transition-all hover:opacity-100 opacity-60" title="Food Detail &amp; Category Dialog (frmFoodDetail - Duy Khôi)" alt="Food Detail" />
+              <img src="assets/the-chill-rest/revenue-report.png" onclick="setGalleryImage('restaurant', 2)" class="restaurant-thumb w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg border-2 border-slate-300 cursor-pointer transition-all hover:opacity-100 opacity-60" title="Revenue Analysis &amp; Reports (frmMenuRevenue - Duy Khôi)" alt="Revenue Reports" />
+              <img src="assets/the-chill-rest/pos-dashboard.png" onclick="setGalleryImage('restaurant', 3)" class="restaurant-thumb w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg border-2 border-slate-300 cursor-pointer transition-all hover:opacity-100 opacity-60" title="POS Table Management Dashboard" alt="POS Dashboard" />
+              <img src="assets/the-chill-rest/class-diagram.png" onclick="setGalleryImage('restaurant', 4)" class="restaurant-thumb w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg border-2 border-slate-300 cursor-pointer transition-all hover:opacity-100 opacity-60" title="System Class Diagram (Designed by Duy Khôi)" alt="Class Diagram" />
+              <img src="assets/the-chill-rest/sequence-diagram.png" onclick="setGalleryImage('restaurant', 5)" class="restaurant-thumb w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg border-2 border-slate-300 cursor-pointer transition-all hover:opacity-100 opacity-60" title="Sequence Diagram: Order &amp; Payment (Designed by Duy Khôi)" alt="Sequence Diagram" />
+              <img src="assets/the-chill-rest/erd-diagram.png" onclick="setGalleryImage('restaurant', 6)" class="restaurant-thumb w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg border-2 border-slate-300 cursor-pointer transition-all hover:opacity-100 opacity-60" title="Entity Relationship Diagram (ERD - Duy Khôi)" alt="ERD Diagram" />
             </div>
           </div>
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
@@ -558,24 +620,65 @@
                 <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[18px] mt-0.5 flex-shrink-0">check_circle</span><span>Orchestrated main application navigation and maintained Git repository standards and merge integration.</span></li>
               </ul>
             </div>
-            <div class="lg:col-span-5 rounded-2xl border-2 border-slate-300 bg-white p-5 flex flex-col gap-3 shadow-xs">
-              <div class="flex items-center justify-between pb-2 border-b-2 border-slate-200">
-                <span class="font-mono text-xs font-bold text-slate-600 uppercase tracking-wider">SQL Server Schema</span>
-                <span class="font-mono text-xs text-brand-700 font-extrabold">dbo.Dishes</span>
+            <!-- Multi-Tier System Architecture (The Chill Rest.) -->
+            <div class="lg:col-span-5 rounded-2xl border-2 border-slate-300 bg-white p-5 flex flex-col gap-2 shadow-xs">
+              <div class="flex items-center justify-between pb-1 border-b border-slate-200">
+                <span class="font-mono text-xs font-bold text-slate-700 uppercase tracking-wider">3-Tier Desktop Architecture</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-cyan-100 text-cyan-900 border border-cyan-300">C# .NET &amp; SQL Server</span>
               </div>
-              <div class="overflow-x-auto rounded-lg border-2 border-slate-300 bg-white">
-                <table class="w-full text-left font-mono text-xs text-slate-800">
-                  <thead class="bg-slate-900 border-b border-slate-800 text-white"><tr><th class="py-2.5 px-3 font-bold">DishID</th><th class="py-2.5 px-3 font-bold">Name</th><th class="py-2.5 px-3 font-bold">Price</th><th class="py-2.5 px-3 font-bold">Status</th></tr></thead>
-                  <tbody class="divide-y-2 divide-slate-100">
-                    <tr><td class="py-2 px-3 text-brand-600 font-extrabold">101</td><td class="py-2 px-3 font-semibold">Pho Bo UEF</td><td class="py-2 px-3 font-medium">$4.50</td><td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-900 border border-emerald-300 font-bold text-[11px]">Active</span></td></tr>
-                    <tr><td class="py-2 px-3 text-brand-600 font-extrabold">102</td><td class="py-2 px-3 font-semibold">Com Tam Suon</td><td class="py-2 px-3 font-medium">$3.80</td><td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-900 border border-emerald-300 font-bold text-[11px]">Active</span></td></tr>
-                    <tr><td class="py-2 px-3 text-brand-600 font-extrabold">103</td><td class="py-2 px-3 font-semibold">Ca Phe Sua Da</td><td class="py-2 px-3 font-medium">$1.80</td><td class="py-2 px-3"><span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-300 font-bold text-[11px]">Out of Stock</span></td></tr>
-                  </tbody>
-                </table>
+
+              <div class="p-2.5 rounded-lg bg-slate-100 border-2 border-slate-300 flex items-center justify-between font-mono text-xs">
+                <div class="flex flex-col">
+                  <span class="font-bold text-slate-900">Presentation Layer (WinForms GUI)</span>
+                  <span class="text-[11px] text-slate-500">frmMain &bull; frmItemManagement &bull; frmFoodDetail &bull; frmMenuRevenue</span>
+                </div>
+                <span class="material-symbols-outlined text-slate-600 text-[18px]">desktop_windows</span>
               </div>
-              <div class="p-3 rounded-lg bg-emerald-50 border-2 border-emerald-300 flex items-center justify-between text-xs font-mono text-emerald-950 font-bold">
-                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-600 text-[18px]">table_view</span><span>EPPlus Export Engine</span></div>
-                <span class="px-2 py-0.5 rounded bg-emerald-200 text-emerald-900 text-[11px]">.xlsx generated</span>
+
+              <div class="flex justify-center text-slate-400 text-xs font-bold leading-none py-0.5">&#9660;</div>
+
+              <div class="p-2.5 rounded-lg bg-indigo-50 border-2 border-indigo-200 flex items-center justify-between font-mono text-xs">
+                <div class="flex flex-col">
+                  <span class="font-extrabold text-indigo-950">Business Logic Layer (BUS)</span>
+                  <span class="text-[11px] text-indigo-700">Category Rules &bull; Validation &bull; Unpaid Bill Deletion Safeguard</span>
+                </div>
+                <span class="material-symbols-outlined text-indigo-600 text-[18px]">rule</span>
+              </div>
+
+              <div class="flex justify-center text-slate-400 text-xs font-bold leading-none py-0.5">&#9660;</div>
+
+              <div class="p-2.5 rounded-lg bg-blue-50 border-2 border-blue-200 flex items-center justify-between font-mono text-xs">
+                <div class="flex flex-col">
+                  <span class="font-extrabold text-blue-950">Data Access Layer (DAL &amp; DTO)</span>
+                  <span class="text-[11px] text-blue-700">ADO.NET &bull; Parameterized Queries &bull; Database.cs &bull; BillDAL</span>
+                </div>
+                <span class="material-symbols-outlined text-blue-600 text-[18px]">sync_alt</span>
+              </div>
+
+              <div class="flex justify-center text-slate-400 text-xs font-bold leading-none py-0.5">&#9660;</div>
+
+              <div class="p-2.5 rounded-lg bg-emerald-50 border-2 border-emerald-300 flex items-center justify-between font-mono text-xs">
+                <div class="flex flex-col">
+                  <span class="font-extrabold text-emerald-950">Database Layer (Persistence)</span>
+                  <span class="text-[11px] text-emerald-800">SQL Server 2022 &bull; Tables, Keys &amp; Stored Procedures</span>
+                </div>
+                <span class="material-symbols-outlined text-emerald-700 text-[18px]">database</span>
+              </div>
+
+              <!-- Quick diagram switcher buttons -->
+              <div class="pt-2 border-t border-slate-200 flex flex-wrap gap-2 text-xs font-mono">
+                <button onclick="setGalleryImage('restaurant', 4)" class="flex-1 py-1.5 px-2 rounded bg-indigo-100 hover:bg-indigo-200 text-indigo-900 font-bold border border-indigo-300 transition-all flex items-center justify-center gap-1 cursor-pointer" type="button">
+                  <span class="material-symbols-outlined text-[15px]">account_tree</span>
+                  <span>Class Diagram</span>
+                </button>
+                <button onclick="setGalleryImage('restaurant', 5)" class="flex-1 py-1.5 px-2 rounded bg-cyan-100 hover:bg-cyan-200 text-cyan-900 font-bold border border-cyan-300 transition-all flex items-center justify-center gap-1 cursor-pointer" type="button">
+                  <span class="material-symbols-outlined text-[15px]">schema</span>
+                  <span>Sequence Diagram</span>
+                </button>
+                <button onclick="setGalleryImage('restaurant', 6)" class="flex-1 py-1.5 px-2 rounded bg-emerald-100 hover:bg-emerald-200 text-emerald-900 font-bold border border-emerald-300 transition-all flex items-center justify-center gap-1 cursor-pointer" type="button">
+                  <span class="material-symbols-outlined text-[15px]">table_chart</span>
+                  <span>ERD Schema</span>
+                </button>
               </div>
             </div>
           </div>
@@ -993,27 +1096,27 @@
         html: `
           <div class="flex flex-col gap-4">
             <div class="rounded-xl overflow-hidden border border-slate-200 shadow-xs relative bg-slate-950">
-              <img src="assets/travel-tour-booking.png" alt="VoyagerElite UI Preview" class="w-full h-56 sm:h-64 object-cover object-top" />
+              <img src="assets/voyager-elite/booking-flow.png" alt="VoyagerElite UI Preview" class="w-full h-56 sm:h-64 object-cover object-top" />
               <div class="absolute bottom-2 left-2 bg-slate-900/85 backdrop-blur-xs text-white text-[11px] font-mono px-2.5 py-1 rounded border border-white/10">
-                Cat Ba Escape &bull; Booking &amp; Payment Options
+                Cat Ba Escape &bull; Booking &amp; Payment Console (Duy Khôi)
               </div>
             </div>
             <p class="leading-relaxed text-slate-700">
-              Responsive web application allowing tourists to explore and book multi-day travel itineraries. Developed with Spring MVC, JSP, Servlet, and MySQL database layer.
+              A robust web application designed for travel agencies and tourists to discover destinations and book guided tour itineraries. Built with Java Servlet, JSP, MVC architecture, and MySQL database layer.
             </p>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
               <div class="p-3 rounded-xl bg-blue-50/70 border border-blue-200">
-                <span class="font-mono font-bold text-brand-700 block mb-1 uppercase text-[10px]">Booking Management</span>
-                <span class="text-slate-600 leading-relaxed">Dynamic seat calculation (20 max), calendar date range validation, and live pricing calculation (3,600,000 đ/pax).</span>
+                <span class="font-mono font-bold text-brand-700 block mb-1 uppercase text-[10px]">Booking Management (Duy Khôi)</span>
+                <span class="text-slate-600 leading-relaxed">Dynamic seat calculation (capacity checks), calendar date range validation, multi-guest pricing aggregation (3,600,000 đ/pax), and booking status lifecycle.</span>
               </div>
               <div class="p-3 rounded-xl bg-cyan-50/70 border border-cyan-200">
-                <span class="font-mono font-bold text-cyan-800 block mb-1 uppercase text-[10px]">Payment Record Ledger</span>
-                <span class="text-slate-600 leading-relaxed">Tracks payment states across Bank Transfer, Visa card, and E-wallet with strict relational audit integrity.</span>
+                <span class="font-mono font-bold text-cyan-800 block mb-1 uppercase text-[10px]">Payment Ledger Module (Duy Khôi)</span>
+                <span class="text-slate-600 leading-relaxed">Comprehensive payment record tracking supporting Bank Transfer, Visa card, and E-wallet with relational audit integrity and payment verification.</span>
               </div>
             </div>
             <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 font-mono text-xs text-slate-600">
-              <span class="font-bold text-slate-800 block mb-1">Architecture Flow:</span>
-              <span>Client JSP View ➔ @Controller ➔ @Service Domain Logic ➔ DAO Layer ➔ MySQL Database</span>
+              <span class="font-bold text-slate-800 block mb-1">Layered MVC Architecture Flow:</span>
+              <span>Client JSP View ➔ @Controller (Routing) ➔ @Service Domain Logic ➔ DAO Layer ➔ MySQL Database</span>
             </div>
           </div>
         `
@@ -1025,27 +1128,31 @@
         html: `
           <div class="flex flex-col gap-4">
             <div class="rounded-xl overflow-hidden border border-slate-200 shadow-xs relative bg-slate-950">
-              <img src="assets/restaurant-management.png" alt="The Chill Rest UI Preview" class="w-full h-56 sm:h-64 object-cover object-top" />
+              <img src="assets/the-chill-rest/menu-management.png" alt="The Chill Rest UI Preview" class="w-full h-56 sm:h-64 object-cover object-top" />
               <div class="absolute bottom-2 left-2 bg-slate-900/85 backdrop-blur-xs text-white text-[11px] font-mono px-2.5 py-1 rounded border border-white/10">
-                The Chill Rest. &bull; Barbecue Platter Ordering POS
+                The Chill Rest. &bull; Menu Management &amp; DataGrid (Lead by Duy Khôi)
               </div>
             </div>
             <p class="leading-relaxed text-slate-700">
-              Dedicated Windows desktop point-of-sale and menu management solution tailored for modern restaurants and barbecue outlets. Built with C# WinForms and SQL Server.
+              A comprehensive Windows desktop restaurant management and ordering solution developed in C# WinForms with Microsoft SQL Server. Implements a modular 3-tier desktop architecture ensuring separation of concerns and high data integrity.
             </p>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
               <div class="p-3 rounded-xl bg-indigo-50/70 border border-indigo-200">
-                <span class="font-mono font-bold text-indigo-700 block mb-1 uppercase text-[10px]">POS Ordering Module ("Tạo đơn")</span>
-                <span class="text-slate-600 leading-relaxed">Visual platter menu grid, dynamic order creation, fast table checkout, and customer feedback rating ("Đánh giá dịch vụ").</span>
+                <span class="font-mono font-bold text-indigo-700 block mb-1 uppercase text-[10px]">Menu &amp; Dishes (frmItemManagement)</span>
+                <span class="text-slate-600 leading-relaxed">Built by Duy Khôi: Full CRUD for dishes and categories, accent-insensitive search via SQL collation, and safe-deletion validation against unpaid active orders.</span>
               </div>
               <div class="p-3 rounded-xl bg-cyan-50/70 border border-cyan-200">
-                <span class="font-mono font-bold text-cyan-800 block mb-1 uppercase text-[10px]">Reporting &amp; Export</span>
-                <span class="text-slate-600 leading-relaxed">Automated EPPlus Excel spreadsheet generation for daily revenue, dish item velocity, and stock levels.</span>
+                <span class="font-mono font-bold text-cyan-800 block mb-1 uppercase text-[10px]">Revenue Analytics (frmMenuRevenue)</span>
+                <span class="text-slate-600 leading-relaxed">Built by Duy Khôi: Date-range SQL aggregations (SUM/COUNT), dish sales velocity, and automated EPPlus Excel workbook export.</span>
               </div>
             </div>
             <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 font-mono text-xs text-slate-600">
-              <span class="font-bold text-slate-800 block mb-1">Tech Stack:</span>
-              <span>C# WinForms (.NET) &bull; ADO.NET &bull; Microsoft SQL Server &bull; EPPlus Excel Library</span>
+              <span class="font-bold text-slate-800 block mb-1">3-Tier Desktop Architecture:</span>
+              <span>Presentation (WinForms GUI) ➔ Business Logic (BUS/Service) ➔ Data Access (DAL &amp; DTO) ➔ SQL Server 2022</span>
+            </div>
+            <div class="p-3 rounded-xl bg-purple-50/80 border border-purple-200 text-xs">
+              <span class="font-mono font-bold text-purple-900 block mb-1 uppercase text-[10px]">Architectural Design Evidence (Duy Khôi)</span>
+              <span class="text-slate-600">Designed the Relational Database ERD, Class Diagram (DTO/DAO relationships), and Sequence Diagrams for order processing and payment transactions.</span>
             </div>
           </div>
         `
@@ -1054,6 +1161,73 @@
 
     function openProjectDetails(k){const d=projectData[k];if(!d)return;document.getElementById('modal-title').textContent=d.title;document.getElementById('modal-icon').textContent=d.icon;document.getElementById('modal-github-link').href=d.github;document.getElementById('modal-content').innerHTML=d.html;document.getElementById('project-modal').classList.remove('hidden');document.body.style.overflow='hidden';}
     function closeProjectModal(){document.getElementById('project-modal').classList.add('hidden');document.body.style.overflow='';}
+
+    // --- Interactive Project Image Galleries ---
+    const galleries = {
+      tour: [
+        { src: 'assets/voyager-elite/booking-flow.png', caption: 'Tour Booking Interface — Form & Dynamic Price (Lead by Duy Khôi)' },
+        { src: 'assets/voyager-elite/booking-management.png', caption: 'Booking Management Console — Status Lifecycle & Filter (Duy Khôi)' },
+        { src: 'assets/voyager-elite/payment-management.png', caption: 'Payment Management Console — Audit Records & Verification (Duy Khôi)' },
+        { src: 'assets/voyager-elite/home-page.png', caption: 'VoyagerElite Travel Portal — Destination Discovery' },
+        { src: 'assets/voyager-elite/tour-detail.png', caption: 'Tour Detail & Itinerary Schedule' },
+        { src: 'assets/voyager-elite/booking-history.png', caption: 'Customer Booking History Portal' }
+      ],
+      restaurant: [
+        { src: 'assets/the-chill-rest/menu-management.png', caption: 'Menu Management (frmItemManagement) — Live DataGrid & Search (Lead by Duy Khôi)' },
+        { src: 'assets/the-chill-rest/food-detail.png', caption: 'Food Detail & Category Dialog (frmFoodDetail) — Input Validation (Duy Khôi)' },
+        { src: 'assets/the-chill-rest/revenue-report.png', caption: 'Revenue Analysis & Reports (frmMenuRevenue) — Sales Velocity (Duy Khôi)' },
+        { src: 'assets/the-chill-rest/pos-dashboard.png', caption: 'Restaurant POS Dashboard — Table Layout & Real-time Orders' },
+        { src: 'assets/the-chill-rest/class-diagram.png', caption: 'System Class Diagram & Data Transfer Architecture (Designed by Duy Khôi)' },
+        { src: 'assets/the-chill-rest/sequence-diagram.png', caption: 'Sequence Diagram for Order & Payment Lifecycle (Designed by Duy Khôi)' },
+        { src: 'assets/the-chill-rest/erd-diagram.png', caption: 'SQL Server Relational ERD Schema (Designed by Duy Khôi)' }
+      ]
+    };
+
+    let currentGalleryIndex = { tour: 0, restaurant: 0 };
+
+    function setGalleryImage(project, index) {
+      const list = galleries[project];
+      if (!list || index < 0 || index >= list.length) return;
+      currentGalleryIndex[project] = index;
+      const item = list[index];
+      const imgEl = document.getElementById(project + '-gallery-img');
+      const capEl = document.getElementById(project + '-gallery-caption');
+      const countEl = document.getElementById(project + '-gallery-counter');
+      if (imgEl) {
+        imgEl.style.opacity = '0.3';
+        setTimeout(() => {
+          imgEl.src = item.src;
+          imgEl.style.opacity = '1';
+        }, 120);
+      }
+      if (capEl) capEl.textContent = item.caption;
+      if (countEl) countEl.textContent = `${index + 1} / ${list.length}`;
+
+      const thumbs = document.querySelectorAll(`.${project}-thumb`);
+      thumbs.forEach((th, idx) => {
+        if (idx === index) {
+          th.classList.add('ring-2', 'ring-brand-600', 'border-transparent', 'scale-[1.03]');
+          th.classList.remove('opacity-60');
+        } else {
+          th.classList.remove('ring-2', 'ring-brand-600', 'border-transparent', 'scale-[1.03]');
+          th.classList.add('opacity-60');
+        }
+      });
+    }
+
+    function nextGallery(project) {
+      const list = galleries[project];
+      let next = currentGalleryIndex[project] + 1;
+      if (next >= list.length) next = 0;
+      setGalleryImage(project, next);
+    }
+
+    function prevGallery(project) {
+      const list = galleries[project];
+      let prev = currentGalleryIndex[project] - 1;
+      if (prev < 0) prev = list.length - 1;
+      setGalleryImage(project, prev);
+    }
 
     // Scroll Reveal Intersection Observer
     const revealObserver = new IntersectionObserver((entries) => {
