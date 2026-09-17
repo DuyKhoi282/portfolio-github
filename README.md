@@ -6,7 +6,8 @@
   <p>Passionate 3rd-year IT student at the <strong>University of Economics and Finance (UEF)</strong>, specializing in Java backend development, Spring Framework, and relational database management systems.</p>
 
   <p>
-    <a href="https://DuyKhoi282.github.io/portfolio-github/"><img src="https://img.shields.io/badge/🌐_Live_Portfolio-GitHub_Pages-2563EB?style=for-the-badge" alt="Live Portfolio"></a>
+    <a href="https://duykhoi-portfolio.netlify.app/"><img src="https://img.shields.io/badge/⚡_Live_Portfolio-Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify Live"></a>
+    <a href="https://DuyKhoi282.github.io/portfolio-github/"><img src="https://img.shields.io/badge/🌐_Mirror_Site-GitHub_Pages-2563EB?style=for-the-badge" alt="GitHub Pages Live"></a>
     <a href="./assets/cv.pdf"><img src="https://img.shields.io/badge/📄_Download_CV-PDF_1--Page-10B981?style=for-the-badge" alt="Download CV"></a>
     <a href="https://github.com/DuyKhoi282"><img src="https://img.shields.io/badge/🐙_GitHub_Profile-DuyKhoi282-181717?style=for-the-badge&logo=github" alt="GitHub Profile"></a>
   </p>
@@ -109,10 +110,11 @@ Feel free to connect with me for internship opportunities or technical discussio
 - 📱 **Phone:** [0929 648 427](tel:0929648427)
 - ✉️ **Email:** [tranquocduykhoi@gmail.com](mailto:tranquocduykhoi@gmail.com)
 - 🐙 **GitHub:** [@DuyKhoi282](https://github.com/DuyKhoi282)
-- 🌐 **Online Portfolio:** [DuyKhoi282.github.io/portfolio-github](https://DuyKhoi282.github.io/portfolio-github/)
+- ⚡ **Live Website:** [duykhoi-portfolio.netlify.app](https://duykhoi-portfolio.netlify.app/)
+- 🌐 **GitHub Mirror:** [DuyKhoi282.github.io/portfolio-github](https://DuyKhoi282.github.io/portfolio-github/)
 
 ---
 
 <div align="center">
-  <sub>Built with clean HTML5, CSS3 & JavaScript • Hosted on GitHub Pages & Netlify • Designed for ATS compliance and clean aesthetics</sub>
+  <sub>Built with clean HTML5, CSS3 & JavaScript • Hosted on Netlify & GitHub Pages • Designed for ATS compliance and clean aesthetics</sub>
 </div>
