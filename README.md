@@ -67,19 +67,20 @@ To develop my career as a **Java Backend Developer** by continuously improving m
 ---
 
 ### 2. The Chill Rest. — Restaurant Management System
-> **Academic Group Project**  
+> **Academic Group Project** • Role: *Database Architect & Menu Module Lead*  
 > **Source Code:** [DuyKhoi282/Restaurant-App](https://github.com/DuyKhoi282/Restaurant-App)
 
 <div align="center">
   <img src="./assets/restaurant-management.png" alt="The Chill Rest Preview" width="850" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
 </div>
 
-- **Tech Stack:** C#, .NET WinForms, Microsoft SQL Server, EPPlus.
-- **Key Features:**
-  - Comprehensive desktop Point-of-Sale (POS) application for menu, table, and order administration.
-  - Dynamic CRUD operations for food categories and menu items with real-time image caching.
-  - Multi-criteria real-time search, price filtering, and category sorting.
-  - Automated business report generation and Excel spreadsheet export via EPPlus library.
+- **Tech Stack:** C#, .NET WinForms, Microsoft SQL Server, ADO.NET.
+- **Key Contributions:**
+  - Architected and implemented the SQL Server relational database schema (tables, foreign keys, stored procedures, and seed datasets).
+  - Developed the end-to-end Menu Management module with full CRUD operations for dishes and categories.
+  - Implemented accent-insensitive search using SQL collation (`Latin1_General_CI_AI`) and parameterized queries to prevent SQL Injection.
+  - Engineered relational safety logic ensuring dishes linked to unpaid orders cannot be deleted, preserving transactional data integrity.
+  - Configured project repository, coding rules, and managed team Git workflow and merge conflict resolution.
 
 ---
 
