@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TRAN QUOC DUY KHOI — Java Backend Developer</title>
+  <meta name="description" content="Portfolio of Tran Quoc Duy Khoi – Java Backend Developer Intern specializing in Spring MVC, Relational Database Architecture, and Multi-tier Systems." />
+
+  <!-- Google Fonts: Syne (Ultra Heavy Display) + Inter + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            dark: {
+              base: '#0A0A0C',
+              surface: '#111118',
+              card: '#14141E',
+              border: '#232332',
+              muted: '#71717A',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #0A0A0C;
+      color: #EDEDED;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Metallic headline gradient */
+    .metallic-title {
+      background: linear-gradient(180deg, #FFFFFF 0%, #D4D4D8 45%, #71717A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Neon Pill Gradient Button */
+    .btn-gradient {
+      background: linear-gradient(135deg, #EC4899 0%, #8B5CF6 100%);
+      box-shadow: 0 0 25px rgba(236, 72, 153, 0.4);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-gradient:hover {
+      box-shadow: 0 0 35px rgba(139, 92, 246, 0.65);
+      transform: translateY(-2px);
+    }
+
+    /* Subtle grid pattern */
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 7px; }
+    ::-webkit-scrollbar-track { background: #0A0A0C; }
+    ::-webkit-scrollbar-thumb { background: #27272A; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #3F3F46; }
+  </style>
+</head>
+<body class="bg-[#0A0A0C] text-[#E4E4E7] antialiased selection:bg-pink-500 selection:text-white">
+
+  <!-- ========================================================================= -->
+  <!-- 1. TOP NAVBAR (Minimalist Brutalist Header) -->
+  <!-- ========================================================================= -->
+  <header class="w-full max-w-[1340px] mx-auto px-6 py-8 flex items-center justify-between font-mono text-xs tracking-wider uppercase">
+    <a href="#hero" class="text-white hover:text-pink-400 transition-colors font-bold flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+      <span>DUYKHOI.DEV</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-10 text-neutral-400">
+      <a href="#about" class="hover:text-white transition-colors">ABOUT</a>
+      <a href="#services" class="hover:text-white transition-colors">SERVICES</a>
+      <a href="#projects" class="hover:text-white transition-colors">PROJECTS</a>
+      <a href="#contact" class="hover:text-white transition-colors">CONTACT</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="Tran_Quoc_Duy_Khoi_Java_Backend_Intern_CV.pdf" download class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-neutral-700 hover:border-neutral-400 text-neutral-300 hover:text-white transition-all text-[11px]">
+        <span>RESUME (PDF)</span>
+      </a>
+      <a href="#contact" class="text-white hover:text-pink-400 transition-colors font-bold">
+        GET IN TOUCH &rarr;
+      </a>
+    </div>
+  </header>
+
+  <main class="w-full max-w-[1340px] mx-auto px-6 flex flex-col gap-28 md:gap-36">
+
+    <!-- ========================================================================= -->
+    <!-- 2. HERO SECTION (Massive Headline + Square Media Center) -->
+    <!-- ========================================================================= -->
+    <section id="hero" class="pt-6 md:pt-12 flex flex-col items-center text-center relative">
+      
+      <!-- Massive Display Title -->
+      <h1 class="font-display font-black text-6xl sm:text-7xl md:text-8xl lg:text-[115px] xl:text-[130px] tracking-tight uppercase leading-[0.88] metallic-title mb-10 select-none">
+        HI, I'M DUY KHOI
+      </h1>
+
+      <!-- Square Central Media Card (Avatar & Status) -->
+      <div class="relative w-72 sm:w-84 md:w-96 aspect-square rounded-2xl border border-neutral-800 bg-[#12121A] p-3 shadow-2xl flex flex-col justify-between overflow-hidden group mb-12">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0C] via-transparent to-transparent opacity-60 z-10 pointer-events-none"></div>
+        <img src="assets/avatar.jpg" alt="Tran Quoc Duy Khoi" class="w-full h-full object-cover rounded-xl grayscale group-hover:grayscale-0 transition-all duration-500 scale-[1.02]" />
+        
+        <!-- Overlay Badges -->
+        <div class="absolute top-5 left-5 z-20 flex items-center gap-2">
+          <span class="px-2.5 py-1 rounded-md bg-black/75 backdrop-blur-md border border-white/10 font-mono text-[10px] text-emerald-400 font-bold flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> ACTIVE INTERN
+          </span>
+        </div>
+        <div class="absolute bottom-5 left-5 right-5 z-20 flex items-center justify-between text-left">
+          <div>
+            <p class="font-display font-black text-sm text-white">DUY KHOI</p>
+            <p class="font-mono text-[10px] text-neutral-400">Java Backend Developer</p>
+          </div>
+          <span class="font-mono text-[10px] text-neutral-400 uppercase tracking-wider">UEF '27</span>
+        </div>
+      </div>
+
+      <!-- Hero Subtext & Action Row -->
+      <div class="w-full flex flex-col sm:flex-row items-center justify-between gap-6 pb-12 border-b border-neutral-800/80">
+        <p class="font-mono text-xs sm:text-sm text-neutral-400 text-left max-w-md uppercase tracking-wider leading-relaxed">
+          A dedicated Java Backend Developer intern building scalable, layered architectures &amp; relational storage.
+        </p>
+        <a href="#contact" class="btn-gradient px-8 py-3.5 rounded-full font-display font-bold text-sm tracking-wider uppercase text-white shadow-lg active:scale-95 transition-all">
+          CONTACT ME
+        </a>
+      </div>
+
+      <!-- 4-Item Horizontal Preview Strip -->
+      <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-4 pt-10">
+        <!-- Item 1 -->
+        <div class="rounded-xl border border-neutral-800 bg-[#12121A] p-4 text-left hover:border-neutral-600 transition-colors flex flex-col gap-2">
+          <span class="font-mono text-[10px] text-neutral-500 uppercase">01 // Web App</span>
+          <p class="font-display font-bold text-sm text-white">VoyagerElite Tour</p>
+          <span class="font-mono text-[11px] text-pink-400">Spring MVC &bull; MySQL</span>
+        </div>
+        <!-- Item 2 -->
+        <div class="rounded-xl border border-neutral-800 bg-[#12121A] p-4 text-left hover:border-neutral-600 transition-colors flex flex-col gap-2">
+          <span class="font-mono text-[10px] text-neutral-500 uppercase">02 // Desktop</span>
+          <p class="font-display font-bold text-sm text-white">The Chill Rest.</p>
+          <span class="font-mono text-[11px] text-purple-400">C# &bull; SQL Server</span>
+        </div>
+        <!-- Item 3 -->
+        <div class="rounded-xl border border-neutral-800 bg-[#12121A] p-4 text-left hover:border-neutral-600 transition-colors flex flex-col gap-2">
+          <span class="font-mono text-[10px] text-neutral-500 uppercase">03 // Language</span>
+          <p class="font-display font-bold text-sm text-white">VSTEP 7.0 (C1)</p>
+          <span class="font-mono text-[11px] text-emerald-400">English Verified</span>
+        </div>
+        <!-- Item 4 -->
+        <div class="rounded-xl border border-neutral-800 bg-[#12121A] p-4 text-left hover:border-neutral-600 transition-colors flex flex-col gap-2">
+          <span class="font-mono text-[10px] text-neutral-500 uppercase">04 // Award</span>
+          <p class="font-display font-bold text-sm text-white">Cybernet 2025</p>
+          <span class="font-mono text-[11px] text-amber-400">Consolation Prize</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 3. ABOUT ME SECTION (Symmetrical Satellite Layout) -->
+    <!-- ========================================================================= -->
+    <section id="about" class="py-12 relative flex flex-col items-center text-center">
+      
+      <!-- Top Satellite Cards -->
+      <div class="w-full flex justify-between items-center mb-6">
+        <div class="w-24 sm:w-32 aspect-square rounded-xl border border-neutral-800 bg-[#12121A] p-3 hidden sm:flex flex-col justify-center items-center text-center gap-1">
+          <span class="font-mono text-[10px] text-neutral-500">DEGREE</span>
+          <span class="font-display font-bold text-xs text-white">B.IT '27</span>
+          <span class="font-mono text-[9px] text-neutral-400">UEF</span>
+        </div>
+        <div class="w-24 sm:w-32 aspect-square rounded-xl border border-neutral-800 bg-[#12121A] p-3 hidden sm:flex flex-col justify-center items-center text-center gap-1">
+          <span class="font-mono text-[10px] text-neutral-500">ENGLISH</span>
+          <span class="font-display font-bold text-xs text-emerald-400">VSTEP 7.0</span>
+          <span class="font-mono text-[9px] text-neutral-400">IELTS 5.5</span>
+        </div>
+      </div>
+
+      <!-- Center Content -->
+      <h2 class="font-display font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight uppercase metallic-title mb-6">
+        ABOUT ME
+      </h2>
+
+      <p class="text-sm sm:text-base md:text-lg text-neutral-300 max-w-2xl leading-relaxed mb-8 font-medium">
+        Final-year Information Technology student at <strong class="text-white">UEF</strong> passionate about Java backend development, Spring MVC, and relational databases. Experienced in building multi-tier architectures, preserving relational data integrity, and engineering secure transactional flows.
+      </p>
+
+      <a href="#contact" class="btn-gradient px-8 py-3.5 rounded-full font-display font-bold text-xs tracking-wider uppercase text-white shadow-lg active:scale-95 transition-all mb-6">
+        CONTACT ME
+      </a>
+
+      <!-- Bottom Satellite Cards -->
+      <div class="w-full flex justify-between items-center mt-6">
+        <div class="w-24 sm:w-32 aspect-square rounded-xl border border-neutral-800 bg-[#12121A] p-3 hidden sm:flex flex-col justify-center items-center text-center gap-1">
+          <span class="font-mono text-[10px] text-neutral-500">ROLE</span>
+          <span class="font-display font-bold text-xs text-pink-400">BACKEND</span>
+          <span class="font-mono text-[9px] text-neutral-400">INTERN</span>
+        </div>
+        <div class="w-24 sm:w-32 aspect-square rounded-xl border border-neutral-800 bg-[#12121A] p-3 hidden sm:flex flex-col justify-center items-center text-center gap-1">
+          <span class="font-mono text-[10px] text-neutral-500">LOCATION</span>
+          <span class="font-display font-bold text-xs text-white">HCMC</span>
+          <span class="font-mono text-[9px] text-neutral-400">VIETNAM</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 4. SERVICES SECTION (High-Contrast Pure White Card with Giant 01-05 Numbers) -->
+    <!-- ========================================================================= -->
+    <section id="services" class="w-full rounded-[36px] sm:rounded-[48px] md:rounded-[60px] bg-white text-black p-8 sm:p-14 md:p-20 shadow-2xl">
+      
+      <!-- Section Title -->
+      <h2 class="font-display font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight uppercase text-black mb-14 md:mb-20">
+        SERVICES
+      </h2>
+
+      <!-- Numbered Rows with Giant Typography -->
+      <div class="flex flex-col divide-y divide-neutral-200">
+
+        <!-- 01 -->
+        <div class="py-8 md:py-12 flex flex-col md:flex-row items-start md:items-baseline gap-6 md:gap-14 first:pt-0">
+          <span class="font-display font-black text-6xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tighter text-black leading-none shrink-0 min-w-[130px] md:min-w-[180px]">
+            01
+          </span>
+          <div class="flex flex-col gap-2">
+            <h3 class="font-display font-black text-xl sm:text-2xl md:text-3xl uppercase tracking-wide text-black">
+              JAVA &amp; SPRING ECOSYSTEM
+            </h3>
+            <p class="text-sm sm:text-base text-neutral-600 font-medium leading-relaxed max-w-2xl">
+              Constructing robust web backends with Spring MVC request mappings, IoC containers, dependency injection, and JSP/Servlet view dispatching supported by Maven build workflows.
+            </p>
+          </div>
+        </div>
+
+        <!-- 02 -->
+        <div class="py-8 md:py-12 flex flex-col md:flex-row items-start md:items-baseline gap-6 md:gap-14">
+          <span class="font-display font-black text-6xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tighter text-black leading-none shrink-0 min-w-[130px] md:min-w-[180px]">
+            02
+          </span>
+          <div class="flex flex-col gap-2">
+            <h3 class="font-display font-black text-xl sm:text-2xl md:text-3xl uppercase tracking-wide text-black">
+              DATABASE ARCHITECTURE &amp; SCHEMA
+            </h3>
+            <p class="text-sm sm:text-base text-neutral-600 font-medium leading-relaxed max-w-2xl">
+              Designing normalized relational schemas, defining primary/foreign key integrity, index strategies, and multi-table JOIN queries across MySQL and SQL Server environments.
+            </p>
+          </div>
+        </div>
+
+        <!-- 03 -->
+        <div class="py-8 md:py-12 flex flex-col md:flex-row items-start md:items-baseline gap-6 md:gap-14">
+          <span class="font-display font-black text-6xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tighter text-black leading-none shrink-0 min-w-[130px] md:min-w-[180px]">
+            03
+          </span>
+          <div class="flex flex-col gap-2">
+            <h3 class="font-display font-black text-xl sm:text-2xl md:text-3xl uppercase tracking-wide text-black">
+              LAYERED MVC &amp; 3-TIER ARCHITECTURE
+            </h3>
+            <p class="text-sm sm:text-base text-neutral-600 font-medium leading-relaxed max-w-2xl">
+              Decoupling software systems into strict presentation, service domain, and data access layers (Controller &rarr; Service &rarr; DAO / BUS &rarr; DAL) to prevent code entanglement and ensure maintainability.
+            </p>
+          </div>
+        </div>
+
+        <!-- 04 -->
+        <div class="py-8 md:py-12 flex flex-col md:flex-row items-start md:items-baseline gap-6 md:gap-14">
+          <span class="font-display font-black text-6xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tighter text-black leading-none shrink-0 min-w-[130px] md:min-w-[180px]">
+            04
+          </span>
+          <div class="flex flex-col gap-2">
+            <h3 class="font-display font-black text-xl sm:text-2xl md:text-3xl uppercase tracking-wide text-black">
+              DATA INTEGRITY &amp; SECURITY
+            </h3>
+            <p class="text-sm sm:text-base text-neutral-600 font-medium leading-relaxed max-w-2xl">
+              Enforcing parameterized SQL queries to prevent SQL Injection attacks and coding business-level safe deletion safeguards that verify unpaid orders before cascading records.
+            </p>
+          </div>
+        </div>
+
+        <!-- 05 -->
+        <div class="py-8 md:py-12 flex flex-col md:flex-row items-start md:items-baseline gap-6 md:gap-14 last:pb-0">
+          <span class="font-display font-black text-6xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tighter text-black leading-none shrink-0 min-w-[130px] md:min-w-[180px]">
+            05
+          </span>
+          <div class="flex flex-col gap-2">
+            <h3 class="font-display font-black text-xl sm:text-2xl md:text-3xl uppercase tracking-wide text-black">
+              SEARCH &amp; LIFECYCLE MANAGEMENT
+            </h3>
+            <p class="text-sm sm:text-base text-neutral-600 font-medium leading-relaxed max-w-2xl">
+              Implementing Vietnamese accent-insensitive collation search (Latin1_General_CI_AI) and finite state machine lifecycles for bookings (Pending &rarr; Confirmed &rarr; Completed &rarr; Cancelled).
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 5. PROJECT SECTION (Bento Media Grid with Real Screenshots & Architecture) -->
+    <!-- ========================================================================= -->
+    <section id="projects" class="py-6 flex flex-col gap-10">
+      
+      <h2 class="font-display font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight uppercase metallic-title">
+        PROJECT
+      </h2>
+
+      <!-- Project 01: VoyagerElite -->
+      <div class="w-full rounded-3xl border border-neutral-800 bg-[#101018] p-6 sm:p-8 flex flex-col gap-6">
+        
+        <!-- Project Header -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-neutral-800">
+          <div class="flex items-baseline gap-3">
+            <span class="font-display font-black text-3xl sm:text-4xl text-white">01</span>
+            <div>
+              <span class="font-mono text-[10px] text-pink-400 font-bold block uppercase tracking-wider">SPRING MVC &bull; MYSQL</span>
+              <h3 class="font-display font-black text-xl sm:text-2xl text-white uppercase">VOYAGERELITE &ndash; TOUR BOOKING SYSTEM</h3>
+            </div>
+          </div>
+          <a href="https://github.com/vannld23/travel-tour-booking-system" target="_blank" rel="noopener" class="px-5 py-2 rounded-full border border-neutral-700 hover:border-pink-500 hover:text-pink-400 font-mono text-xs font-bold text-white transition-all self-start sm:self-auto">
+            SEE PROJECT &rarr;
+          </a>
+        </div>
+
+        <!-- Bento Media Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+          
+          <!-- Left Column (40%): 2 Stacked Cards -->
+          <div class="lg:col-span-5 flex flex-col gap-5">
+            <!-- Box 1 -->
+            <div class="rounded-2xl border border-neutral-800 bg-[#161622] p-5 flex flex-col justify-between gap-3 h-full">
+              <span class="font-mono text-[10px] text-neutral-400 uppercase font-bold">Booking Lifecycle State Machine</span>
+              <p class="font-mono text-xs text-emerald-400 bg-emerald-950/40 p-2.5 rounded-lg border border-emerald-800/60">
+                Pending &rarr; Confirmed &rarr; Completed &rarr; Cancelled
+              </p>
+              <p class="text-xs text-neutral-400 leading-relaxed font-medium">
+                Engineered booking creation, customer itinerary history tracking, and transactional status validation.
+              </p>
+            </div>
+            <!-- Box 2 -->
+            <div class="rounded-2xl border border-neutral-800 bg-[#161622] p-5 flex flex-col justify-between gap-3 h-full">
+              <span class="font-mono text-[10px] text-neutral-400 uppercase font-bold">Multi-Tier Architecture Flow</span>
+              <div class="grid grid-cols-4 gap-1.5 font-mono text-[10px] text-center">
+                <span class="p-1.5 rounded bg-neutral-900 border border-neutral-800 text-neutral-300">JSP</span>
+                <span class="p-1.5 rounded bg-blue-950/50 border border-blue-800/50 text-blue-300">Ctrl</span>
+                <span class="p-1.5 rounded bg-indigo-950/50 border border-indigo-800/50 text-indigo-300">Service</span>
+                <span class="p-1.5 rounded bg-emerald-950/50 border border-emerald-800/50 text-emerald-300">DAO</span>
+              </div>
+              <p class="text-xs text-neutral-400 leading-relaxed font-medium">
+                Layered MVC separation isolating business calculation from database persistence.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column (60%): Large Main Media Image -->
+          <div class="lg:col-span-7 rounded-2xl border border-neutral-800 bg-[#14141F] overflow-hidden relative group min-h-[280px] sm:min-h-[340px] flex items-center justify-center p-3">
+            <img src="assets/voyager-elite/booking-flow.png" alt="VoyagerElite UI Screenshot" class="w-full h-full object-cover object-top rounded-xl group-hover:scale-[1.02] transition-transform duration-500" />
+            <div class="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-md p-3 rounded-xl border border-white/10 flex items-center justify-between">
+              <span class="font-mono text-xs text-white font-bold">Booking &amp; Payment Module</span>
+              <span class="font-mono text-[11px] text-pink-400">VoyagerElite Core UI</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Project 02: The Chill Rest. -->
+      <div class="w-full rounded-3xl border border-neutral-800 bg-[#101018] p-6 sm:p-8 flex flex-col gap-6">
+        
+        <!-- Project Header -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-neutral-800">
+          <div class="flex items-baseline gap-3">
+            <span class="font-display font-black text-3xl sm:text-4xl text-white">02</span>
+            <div>
+              <span class="font-mono text-[10px] text-purple-400 font-bold block uppercase tracking-wider">C# WINFORMS &bull; SQL SERVER</span>
+              <h3 class="font-display font-black text-xl sm:text-2xl text-white uppercase">THE CHILL REST. &ndash; MANAGEMENT APP</h3>
+            </div>
+          </div>
+          <a href="https://github.com/DuyKhoi282/Restaurant-App" target="_blank" rel="noopener" class="px-5 py-2 rounded-full border border-neutral-700 hover:border-purple-500 hover:text-purple-400 font-mono text-xs font-bold text-white transition-all self-start sm:self-auto">
+            SEE PROJECT &rarr;
+          </a>
+        </div>
+
+        <!-- Bento Media Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+          
+          <!-- Left Column (40%): 2 Stacked Cards -->
+          <div class="lg:col-span-5 flex flex-col gap-5">
+            <!-- Box 1 -->
+            <div class="rounded-2xl border border-neutral-800 bg-[#161622] p-5 flex flex-col justify-between gap-3 h-full">
+              <span class="font-mono text-[10px] text-neutral-400 uppercase font-bold">Security &amp; Collation Search</span>
+              <p class="font-mono text-xs text-purple-400 bg-purple-950/40 p-2 rounded-lg border border-purple-800/60">
+                Collation: Latin1_General_CI_AI
+              </p>
+              <p class="text-xs text-neutral-400 leading-relaxed font-medium">
+                Parameterized ADO.NET queries completely neutralizing SQL Injection vulnerabilities with accent-insensitive search.
+              </p>
+            </div>
+            <!-- Box 2 -->
+            <div class="rounded-2xl border border-neutral-800 bg-[#161622] p-5 flex flex-col justify-between gap-3 h-full">
+              <span class="font-mono text-[10px] text-neutral-400 uppercase font-bold">Relational Integrity Safeguards</span>
+              <p class="font-mono text-xs text-neutral-300">
+                Safe-deletion verification logic inspecting unpaid orders before menu cascade.
+              </p>
+              <div class="flex items-center gap-2 font-mono text-[10px] text-neutral-400 pt-1 border-t border-neutral-800">
+                <span>Stack: WinForms &bull; ADO.NET &bull; EPPlus</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column (60%): Large Main Media Image -->
+          <div class="lg:col-span-7 rounded-2xl border border-neutral-800 bg-[#14141F] overflow-hidden relative group min-h-[280px] sm:min-h-[340px] flex items-center justify-center p-3">
+            <img src="assets/the-chill-rest/menu-management.png" alt="The Chill Rest UI Screenshot" class="w-full h-full object-cover object-top rounded-xl group-hover:scale-[1.02] transition-transform duration-500" />
+            <div class="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-md p-3 rounded-xl border border-white/10 flex items-center justify-between">
+              <span class="font-mono text-xs text-white font-bold">Menu Management Module</span>
+              <span class="font-mono text-[11px] text-purple-400">The Chill Rest. Core UI</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Project 03: Credentials & Academic References -->
+      <div class="w-full rounded-3xl border border-neutral-800 bg-[#101018] p-6 sm:p-8 flex flex-col gap-6">
+        
+        <!-- Project Header -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-neutral-800">
+          <div class="flex items-baseline gap-3">
+            <span class="font-display font-black text-3xl sm:text-4xl text-white">03</span>
+            <div>
+              <span class="font-mono text-[10px] text-emerald-400 font-bold block uppercase tracking-wider">EDUCATION &bull; HONORS</span>
+              <h3 class="font-display font-black text-xl sm:text-2xl text-white uppercase">CREDENTIALS &amp; ACADEMIC BACKING</h3>
+            </div>
+          </div>
+          <span class="px-4 py-1.5 rounded-full bg-emerald-950/60 border border-emerald-800 font-mono text-xs font-bold text-emerald-300">
+            VERIFIED RECORD
+          </span>
+        </div>
+
+        <!-- Bento Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 font-mono">
+          <div class="rounded-2xl border border-neutral-800 bg-[#161622] p-5 flex flex-col justify-between gap-4">
+            <div>
+              <span class="text-[10px] text-neutral-500 uppercase block mb-1">University</span>
+              <h4 class="font-display font-bold text-lg text-white">UEF</h4>
+              <p class="text-xs text-neutral-400 font-sans mt-1">Bachelor of Information Technology &bull; Final-year student (Exp. 2027)</p>
+            </div>
+            <span class="text-[11px] text-neutral-500">Ho Chi Minh City, Vietnam</span>
+          </div>
+
+          <div class="rounded-2xl border border-neutral-800 bg-[#161622] p-5 flex flex-col justify-between gap-4">
+            <div>
+              <span class="text-[10px] text-neutral-500 uppercase block mb-1">Achievements</span>
+              <h4 class="font-display font-bold text-lg text-amber-400">Cybernet 2025</h4>
+              <p class="text-xs text-neutral-400 font-sans mt-1">Consolation Prize – Cybernet Competition 2025 (UEF)</p>
+            </div>
+            <span class="text-[11px] text-emerald-400 font-bold">VSTEP 7.0 &bull; IELTS 5.5</span>
+          </div>
+
+          <div class="rounded-2xl border border-neutral-800 bg-[#161622] p-5 flex flex-col justify-between gap-4">
+            <div>
+              <span class="text-[10px] text-neutral-500 uppercase block mb-1">Academic Reference</span>
+              <h4 class="font-display font-bold text-base text-white">Dr. Hoang Van Hieu</h4>
+              <p class="text-xs text-neutral-400 font-sans mt-1">University of Economics and Finance (UEF)</p>
+            </div>
+            <a href="mailto:hieuhv@uef.edu.vn" class="text-xs text-pink-400 hover:underline break-all">
+              hieuhv@uef.edu.vn
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 6. FOOTER CTA SECTION (Final Impact Statement) -->
+    <!-- ========================================================================= -->
+    <section id="contact" class="py-16 flex flex-col items-center text-center border-t border-neutral-800/80">
+      <h2 class="font-display font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight uppercase metallic-title mb-4">
+        READY TO MAKE AN IMPACT?
+      </h2>
+      <p class="text-sm sm:text-base text-neutral-400 max-w-lg mb-8 leading-relaxed font-medium">
+        Currently seeking a full-time Java Backend Developer Internship. Let's discuss how I can contribute to your engineering team.
+      </p>
+
+      <a href="mailto:tranquocduykhoi@gmail.com" class="btn-gradient px-10 py-4 rounded-full font-display font-black text-sm tracking-wider uppercase text-white shadow-xl active:scale-95 transition-all mb-12">
+        CONTACT ME
+      </a>
+
+      <!-- Quick Contact Info -->
+      <div class="flex flex-wrap items-center justify-center gap-6 font-mono text-xs text-neutral-400">
+        <a href="mailto:tranquocduykhoi@gmail.com" class="hover:text-white transition-colors">
+          tranquocduykhoi@gmail.com
+        </a>
+        <span>&bull;</span>
+        <span>Phone: 0929 648 427</span>
+        <span>&bull;</span>
+        <a href="https://github.com/DuyKhoi282" target="_blank" rel="noopener" class="hover:text-white transition-colors">
+          github.com/DuyKhoi282
+        </a>
+      </div>
+
+      <p class="font-mono text-[10px] text-neutral-600 mt-12 uppercase tracking-widest">
+        &copy; 2026 TRAN QUOC DUY KHOI. ALL RIGHTS RESERVED.
+      </p>
+    </section>
+
+  </main>
+
+</body>
+</html>
