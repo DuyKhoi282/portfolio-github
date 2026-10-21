@@ -8,7 +8,11 @@
   <meta property="og:title" content="Tran Quoc Duy Khoi - Developer Portfolio" />
   <meta property="og:description" content="Java Backend Developer Intern portfolio for Tran Quoc Duy Khoi featuring academic projects in Spring MVC and C#, technical skills, certifications, and contact coordinates." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://duykhoi-portfolio.netlify.app/" />
+  <meta property="og:image" content="https://duykhoi-portfolio.netlify.app/assets/avatar.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://duykhoi-portfolio.netlify.app/assets/avatar.jpg" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232563eb'/%3E%3Ctext x='16' y='23' font-family='Arial,sans-serif' font-size='19' font-weight='700' fill='white' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,7 +24,7 @@
       theme: {
         extend: {
           colors: {
-            brand: { 50:'#eff6ff', 100:'#dbeafe', 500:'#3b82f6', 600:'#2563eb', 700:'#1d4ed8', 800:'#1e40af', 900:'#1e3a8a' },
+            brand: { 50:'#eff6ff', 100:'#dbeafe', 300:'#93c5fd', 400:'#60a5fa', 500:'#3b82f6', 600:'#2563eb', 700:'#1d4ed8', 800:'#1e40af', 900:'#1e3a8a' },
             accent: { cyan:'#0284c7', teal:'#0d9488', emerald:'#059669' }
           },
           fontFamily: { 
@@ -73,7 +77,7 @@
       left: 0;
       height: 3.5px;
       width: 0%;
-      background: linear-gradient(90deg, #2563eb, #0284c7, #10b981);
+      background: #2563eb;
       z-index: 9999;
       transition: width 0.12s ease-out;
     }
@@ -99,12 +103,6 @@
       background-color: #ffffff;
       border: 2px solid #cbd5e1;
       box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.06), 0 10px 24px -4px rgba(15, 23, 42, 0.09);
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .elevated-card:hover {
-      border-color: #2563eb;
-      box-shadow: 0 18px 36px -8px rgba(37, 99, 235, 0.22), 0 8px 16px -4px rgba(15, 23, 42, 0.08);
-      transform: translateY(-4px);
     }
 
     /* Inner box utility for clear sub-containers */
@@ -138,10 +136,9 @@
       <nav class="hidden md:flex items-center relative bg-slate-200/90 p-1 rounded-full border border-slate-300 shadow-inner" id="desktop-nav">
         <div id="nav-indicator" class="absolute top-1 bottom-1 rounded-full bg-white shadow-md border border-slate-300 transition-all duration-300 ease-out pointer-events-none"></div>
         <a class="nav-item relative z-10 text-brand-600 font-bold px-3.5 py-1 text-xs rounded-full transition-colors" href="#home" data-section="home">Home</a>
-        <a class="nav-item relative z-10 text-slate-700 font-medium px-3.5 py-1 text-xs rounded-full hover:text-brand-600 transition-colors" href="#objective" data-section="objective">Objective</a>
-        <a class="nav-item relative z-10 text-slate-700 font-medium px-3.5 py-1 text-xs rounded-full hover:text-brand-600 transition-colors" href="#about" data-section="about">About</a>
-        <a class="nav-item relative z-10 text-slate-700 font-medium px-3.5 py-1 text-xs rounded-full hover:text-brand-600 transition-colors" href="#skills" data-section="skills">Skills</a>
         <a class="nav-item relative z-10 text-slate-700 font-medium px-3.5 py-1 text-xs rounded-full hover:text-brand-600 transition-colors" href="#projects" data-section="projects">Projects</a>
+        <a class="nav-item relative z-10 text-slate-700 font-medium px-3.5 py-1 text-xs rounded-full hover:text-brand-600 transition-colors" href="#skills" data-section="skills">Skills</a>
+        <a class="nav-item relative z-10 text-slate-700 font-medium px-3.5 py-1 text-xs rounded-full hover:text-brand-600 transition-colors" href="#about" data-section="about">About</a>
         <a class="nav-item relative z-10 text-slate-700 font-medium px-3.5 py-1 text-xs rounded-full hover:text-brand-600 transition-colors" href="#certifications" data-section="certifications">Certifications</a>
         <a class="nav-item relative z-10 text-slate-700 font-medium px-3.5 py-1 text-xs rounded-full hover:text-brand-600 transition-colors" href="#contact" data-section="contact">Contact</a>
       </nav>
@@ -159,10 +156,9 @@
     <!-- Mobile Navigation Drawer -->
     <div class="hidden md:hidden border-b-2 border-slate-300 bg-white px-4 py-4 flex-col gap-2 shadow-lg" id="mobile-menu">
       <a class="mobile-nav-link text-brand-600 font-semibold py-2 px-3 rounded-lg bg-brand-50" href="#home">Home</a>
-      <a class="mobile-nav-link text-slate-700 font-medium hover:text-brand-600 py-2 px-3 rounded-lg hover:bg-slate-100" href="#objective">Objective</a>
-      <a class="mobile-nav-link text-slate-700 font-medium hover:text-brand-600 py-2 px-3 rounded-lg hover:bg-slate-100" href="#about">About</a>
-      <a class="mobile-nav-link text-slate-700 font-medium hover:text-brand-600 py-2 px-3 rounded-lg hover:bg-slate-100" href="#skills">Skills</a>
       <a class="mobile-nav-link text-slate-700 font-medium hover:text-brand-600 py-2 px-3 rounded-lg hover:bg-slate-100" href="#projects">Projects</a>
+      <a class="mobile-nav-link text-slate-700 font-medium hover:text-brand-600 py-2 px-3 rounded-lg hover:bg-slate-100" href="#skills">Skills</a>
+      <a class="mobile-nav-link text-slate-700 font-medium hover:text-brand-600 py-2 px-3 rounded-lg hover:bg-slate-100" href="#about">About</a>
       <a class="mobile-nav-link text-slate-700 font-medium hover:text-brand-600 py-2 px-3 rounded-lg hover:bg-slate-100" href="#certifications">Certifications</a>
       <a class="mobile-nav-link text-slate-700 font-medium hover:text-brand-600 py-2 px-3 rounded-lg hover:bg-slate-100" href="#contact">Contact</a>
       <div class="pt-3 mt-1 border-t border-slate-200">
@@ -192,16 +188,16 @@
           </div>
 
           <div class="flex flex-col gap-2">
-            <h1 class="font-heading text-4xl sm:text-5xl lg:text-[50px] font-extrabold text-slate-950 tracking-tight leading-tight">
-              Hi, I'm <span class="bg-gradient-to-r from-brand-600 via-blue-600 to-accent-cyan bg-clip-text text-transparent">Tran Quoc Duy Khoi</span>
+            <h1 class="font-heading text-4xl sm:text-5xl lg:text-[50px] font-extrabold text-slate-950 tracking-tight leading-tight text-balance">
+              Hi, I'm <span class="text-brand-600">Tran Quoc Duy Khoi</span>
             </h1>
             <div class="font-heading text-xl sm:text-2xl font-bold text-slate-800 min-h-[38px] flex items-center flex-wrap">
               <span id="typewriter-text" class="text-brand-600 font-extrabold tracking-tight">Java Backend Developer Intern</span><span id="typewriter-cursor" class="inline-block w-[3px] h-6 bg-brand-600 ml-1 rounded-full animate-pulse"></span>
             </div>
           </div>
 
-          <p class="text-base sm:text-lg text-slate-800 max-w-xl leading-relaxed text-justify font-medium">
-            Fourth-year Information Technology student at <strong class="text-slate-950 font-extrabold">UEF</strong> passionate about Java backend development, Spring Framework, databases, and building robust, practical software applications.
+          <p class="text-base sm:text-lg text-slate-800 max-w-xl leading-relaxed font-medium">
+            Final-year IT student at <strong class="text-slate-950 font-extrabold">UEF</strong> building Java backends with Spring MVC and MySQL: transactional booking and payment flows, relational schema design, and server-side validation.
           </p>
 
           <div class="flex flex-wrap items-center gap-3.5 pt-2">
@@ -217,11 +213,11 @@
           </div>
 
           <div class="grid grid-cols-2 gap-4 pt-4 border-t-2 border-slate-200 w-full font-mono text-xs">
-            <div class="p-3.5 rounded-xl bg-white border-2 border-slate-200 shadow-xs hover:border-brand-500 hover:shadow-md transition-all">
+            <div class="p-3.5 rounded-xl bg-white border-2 border-slate-200 shadow-xs">
               <span class="text-[10px] text-slate-500 uppercase tracking-wider block font-bold">Core Specialty</span>
               <span class="text-brand-600 font-extrabold text-sm">Java / Spring</span>
             </div>
-            <div class="p-3.5 rounded-xl bg-white border-2 border-slate-200 shadow-xs hover:border-brand-500 hover:shadow-md transition-all">
+            <div class="p-3.5 rounded-xl bg-white border-2 border-slate-200 shadow-xs">
               <span class="text-[10px] text-slate-500 uppercase tracking-wider block font-bold">Location</span>
               <span class="text-slate-900 font-extrabold text-sm">Ho Chi Minh</span>
             </div>
@@ -288,236 +284,13 @@
 
 
     <!-- ========================================================================= -->
-    <!-- 2. CAREER OBJECTIVE SECTION -->
-    <!-- ========================================================================= -->
-    <section class="flex flex-col gap-6" id="objective">
-      <div class="flex flex-col gap-2 reveal">
-        <div class="flex items-center gap-2">
-          <span class="px-3 py-1 rounded-full bg-blue-600 text-white font-mono text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-2xs">
-            <span class="material-symbols-outlined text-[16px]">flag</span><span>Career Goal</span>
-          </span>
-        </div>
-        <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-950">Career Objective</h2>
-      </div>
-
-      <div class="elevated-card rounded-2xl p-6 sm:p-8 relative overflow-hidden reveal delay-100">
-        <div class="absolute -right-8 -top-8 w-48 h-48 bg-gradient-to-br from-brand-100 to-cyan-100 rounded-full blur-2xl opacity-60 pointer-events-none"></div>
-        <div class="flex flex-col gap-6 relative z-10">
-          <div class="flex items-start gap-4">
-            <span class="material-symbols-outlined text-brand-600 text-4xl opacity-90">format_quote</span>
-            <p class="text-base sm:text-lg text-slate-800 leading-relaxed font-semibold italic">
-              "To develop my career as a Java Backend Developer by improving my Java, Spring Framework, database, and backend development skills. Seeking a full-time internship to gain practical experience, strengthen problem-solving abilities, and contribute to real-world software projects."
-            </p>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4 border-t-2 border-slate-100">
-            <div class="p-4 rounded-xl bg-white border-2 border-slate-200 border-t-4 border-t-amber-500 hover:border-amber-400 hover:shadow-md hover:-translate-y-1 transition-all flex flex-col gap-2 shadow-2xs">
-              <div class="flex items-center gap-2 text-amber-600">
-                <span class="material-symbols-outlined text-[22px]">code_blocks</span>
-                <h3 class="font-heading font-extrabold text-slate-900 text-sm">Core Java &amp; OOP</h3>
-              </div>
-              <p class="text-xs text-slate-700 leading-relaxed font-medium">Strong OOP paradigms, interfaces, exception handling, and collections framework.</p>
-            </div>
-
-            <div class="p-4 rounded-xl bg-white border-2 border-slate-200 border-t-4 border-t-cyan-500 hover:border-cyan-400 hover:shadow-md hover:-translate-y-1 transition-all flex flex-col gap-2 shadow-2xs">
-              <div class="flex items-center gap-2 text-cyan-700">
-                <span class="material-symbols-outlined text-[22px]">deployed_code</span>
-                <h3 class="font-heading font-extrabold text-slate-900 text-sm">Spring Ecosystem</h3>
-              </div>
-              <p class="text-xs text-slate-700 leading-relaxed font-medium">Spring MVC request mapping, IoC container, dependency injection, and REST endpoints.</p>
-            </div>
-
-            <div class="p-4 rounded-xl bg-white border-2 border-slate-200 border-t-4 border-t-emerald-500 hover:border-emerald-400 hover:shadow-md hover:-translate-y-1 transition-all flex flex-col gap-2 shadow-2xs">
-              <div class="flex items-center gap-2 text-emerald-600">
-                <span class="material-symbols-outlined text-[22px]">database</span>
-                <h3 class="font-heading font-extrabold text-slate-900 text-sm">Relational DB Modeling</h3>
-              </div>
-              <p class="text-xs text-slate-700 leading-relaxed font-medium">Schema normalization, foreign key integrity, query optimization, and transactions.</p>
-            </div>
-
-            <div class="p-4 rounded-xl bg-white border-2 border-slate-200 border-t-4 border-t-indigo-500 hover:border-indigo-400 hover:shadow-md hover:-translate-y-1 transition-all flex flex-col gap-2 shadow-2xs">
-              <div class="flex items-center gap-2 text-indigo-600">
-                <span class="material-symbols-outlined text-[22px]">layers</span>
-                <h3 class="font-heading font-extrabold text-slate-900 text-sm">Clean Architecture</h3>
-              </div>
-              <p class="text-xs text-slate-700 leading-relaxed font-medium">Controller-Service-DAO separation for maintainable and scalable codebases.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================= -->
-    <!-- 3. ABOUT ME SECTION -->
-    <!-- ========================================================================= -->
-    <section class="flex flex-col gap-6" id="about">
-      <div class="flex flex-col gap-2 reveal">
-        <div class="flex items-center gap-2">
-          <span class="px-3 py-1 rounded-full bg-blue-600 text-white font-mono text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-2xs">
-            <span class="material-symbols-outlined text-[16px]">person</span><span>Candidate Profile</span>
-          </span>
-        </div>
-        <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-950">About Me</h2>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-        
-        <!-- Left: Narrative & Callout -->
-        <div class="lg:col-span-6 p-6 sm:p-7 rounded-2xl elevated-card flex flex-col gap-5 reveal delay-100">
-          <div class="flex items-center gap-4 pb-4 border-b border-slate-200">
-            <img src="assets/avatar.jpg" onerror="if(this.src!=='https://duykhoi-portfolio.netlify.app/assets/avatar.jpg')this.src='https://duykhoi-portfolio.netlify.app/assets/avatar.jpg';" alt="Tran Quoc Duy Khoi" class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl object-cover object-[center_35%] border-2 border-brand-500 shadow-md ring-4 ring-brand-100 shrink-0" />
-            <div>
-              <h3 class="font-heading font-extrabold text-slate-900 text-lg sm:text-xl">Tran Quoc Duy Khoi</h3>
-              <p class="font-mono text-xs text-brand-700 font-bold flex items-center gap-1.5 mt-0.5">
-                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-                <span>Java Backend Intern &bull; UEF 2027</span>
-              </p>
-            </div>
-          </div>
-          
-          <p class="text-slate-800 text-base leading-relaxed font-medium">
-            I am a fourth-year (final-year) Information Technology student at the <strong class="text-slate-950 font-extrabold">University of Economics and Finance (UEF)</strong>, focusing on Java backend development. I have experience building academic web and desktop applications using Java, Spring MVC, MySQL, C#, and SQL Server. I am seeking a full-time internship where I can improve my backend development skills and contribute to real-world software projects.
-          </p>
-
-          <div class="p-4 rounded-xl bg-emerald-50 border-2 border-emerald-200 text-xs sm:text-sm text-emerald-950 flex items-start gap-3">
-            <span class="material-symbols-outlined text-emerald-600 text-[22px] mt-0.5 shrink-0">verified_user</span>
-            <span class="font-semibold">Focused on core backend fundamentals: multi-tier MVC architecture, relational database constraints, and transactional consistency.</span>
-          </div>
-        </div>
-
-        <!-- Right: 4 Metric Cards -->
-        <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div class="p-5 rounded-2xl elevated-card border-l-4 border-l-brand-600 hover:border-brand-500 transition-all flex flex-col gap-1 reveal delay-100">
-            <span class="font-mono text-[11px] text-slate-500 uppercase tracking-wider font-bold">Education</span>
-            <div class="flex items-center gap-2 mt-1"><span class="material-symbols-outlined text-brand-600 text-[22px]">school</span><span class="font-heading font-extrabold text-slate-900 text-lg">UEF</span></div>
-            <p class="text-xs text-slate-600 mt-1 font-medium">University of Economics and Finance</p>
-          </div>
-
-          <div class="p-5 rounded-2xl elevated-card border-l-4 border-l-cyan-600 hover:border-cyan-500 transition-all flex flex-col gap-1 reveal delay-200">
-            <span class="font-mono text-[11px] text-slate-500 uppercase tracking-wider font-bold">Graduation</span>
-            <div class="flex items-center gap-2 mt-1"><span class="material-symbols-outlined text-accent-cyan text-[22px]">event_available</span><span class="font-heading font-extrabold text-slate-900 text-lg">2027</span></div>
-            <p class="text-xs text-slate-600 mt-1 font-medium">Expected undergraduate completion</p>
-          </div>
-
-          <div class="p-5 rounded-2xl elevated-card border-l-4 border-l-indigo-600 hover:border-indigo-500 transition-all flex flex-col gap-1 reveal delay-300">
-            <span class="font-mono text-[11px] text-slate-500 uppercase tracking-wider font-bold">Target Role</span>
-            <div class="flex items-center gap-2 mt-1"><span class="material-symbols-outlined text-indigo-600 text-[22px]">developer_mode_tv</span><span class="font-heading font-extrabold text-slate-900 text-lg">Backend Intern</span></div>
-            <p class="text-xs text-slate-600 mt-1 font-medium">Java Backend Developer Intern</p>
-          </div>
-
-          <div class="p-5 rounded-2xl elevated-card border-l-4 border-l-emerald-600 hover:border-emerald-500 transition-all flex flex-col gap-1 reveal delay-400">
-            <span class="font-mono text-[11px] text-slate-500 uppercase tracking-wider font-bold">Availability</span>
-            <div class="flex items-center gap-2 mt-1"><span class="material-symbols-outlined text-emerald-600 text-[22px]">schedule</span><span class="font-heading font-extrabold text-slate-900 text-lg">Full-time</span></div>
-            <p class="text-xs text-slate-600 mt-1 font-medium">Full-time Internship engagement</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ========================================================================= -->
-    <!-- 4. TECHNICAL SKILLS SECTION (5-Category Bento) -->
-    <!-- ========================================================================= -->
-    <section class="flex flex-col gap-6" id="skills">
-      <div class="flex flex-col gap-2 reveal">
-        <div class="flex items-center gap-2">
-          <span class="px-3 py-1 rounded-full bg-blue-600 text-white font-mono text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-2xs">
-            <span class="material-symbols-outlined text-[16px]">build</span><span>Capabilities</span>
-          </span>
-        </div>
-        <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-950">Technical Skills</h2>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        
-        <!-- Category 1: Languages -->
-        <div class="elevated-card rounded-2xl p-6 border-t-4 border-t-amber-500 flex flex-col gap-4 reveal delay-100">
-          <div class="flex items-center justify-between">
-            <span class="font-heading font-extrabold text-slate-900">Programming Languages</span>
-            <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center border border-amber-300 shadow-2xs"><span class="material-symbols-outlined text-[18px]">terminal</span></div>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 rounded-md bg-amber-100 border border-amber-300 font-mono text-xs font-bold text-amber-900">Java</span>
-            <span class="px-3 py-1 rounded-md bg-purple-100 border border-purple-300 font-mono text-xs font-bold text-purple-900">C#</span>
-          </div>
-          <p class="text-xs text-slate-600 mt-auto leading-relaxed font-medium">Strong foundation in OOP, typing discipline, memory management, and modular design.</p>
-        </div>
-
-        <!-- Category 2: Backend & Web -->
-        <div class="elevated-card rounded-2xl p-6 border-t-4 border-t-emerald-500 flex flex-col gap-4 reveal delay-200">
-          <div class="flex items-center justify-between">
-            <span class="font-heading font-extrabold text-slate-900">Backend &amp; Web</span>
-            <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center border border-emerald-300 shadow-2xs"><span class="material-symbols-outlined text-[18px]">dns</span></div>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 rounded-md bg-emerald-100 border border-emerald-300 font-mono text-xs font-bold text-emerald-900">Spring MVC</span>
-            <span class="px-3 py-1 rounded-md bg-blue-100 border border-blue-300 font-mono text-xs font-bold text-blue-900">Spring Boot (Basic)</span>
-            <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">JSP</span>
-            <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">Servlet</span>
-          </div>
-          <p class="text-xs text-slate-600 mt-auto leading-relaxed font-medium">Server-side routing, request handling lifecycle, view dispatchers, and session attributes.</p>
-        </div>
-
-        <!-- Category 3: Architecture & Design -->
-        <div class="elevated-card rounded-2xl p-6 border-t-4 border-t-indigo-500 flex flex-col gap-4 reveal delay-300">
-          <div class="flex items-center justify-between">
-            <span class="font-heading font-extrabold text-slate-900">Architecture &amp; Design</span>
-            <div class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center border border-indigo-300 shadow-2xs"><span class="material-symbols-outlined text-[18px]">account_tree</span></div>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-2.5 py-1 rounded-md bg-indigo-50 border border-indigo-200 font-mono text-xs text-indigo-900 font-bold">MVC Architecture</span>
-            <span class="px-2.5 py-1 rounded-md bg-indigo-50 border border-indigo-200 font-mono text-xs text-indigo-900 font-bold">Layered Architecture</span>
-            <span class="px-2.5 py-1 rounded-md bg-indigo-50 border border-indigo-200 font-mono text-xs text-indigo-900 font-bold">Database Design</span>
-            <span class="px-2.5 py-1 rounded-md bg-indigo-50 border border-indigo-200 font-mono text-xs text-indigo-900 font-bold">CRUD Operations</span>
-          </div>
-          <p class="text-xs text-slate-600 mt-auto leading-relaxed font-medium">Decoupled presentation, domain logic, and data abstraction for zero code entanglement.</p>
-        </div>
-
-        <!-- Category 4: Databases -->
-        <div class="elevated-card rounded-2xl p-6 border-t-4 border-t-cyan-500 flex flex-col gap-4 reveal delay-100">
-          <div class="flex items-center justify-between">
-            <span class="font-heading font-extrabold text-slate-900">Databases</span>
-            <div class="w-8 h-8 rounded-lg bg-cyan-100 text-cyan-700 flex items-center justify-center border border-cyan-300 shadow-2xs"><span class="material-symbols-outlined text-[18px]">storage</span></div>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 rounded-md bg-cyan-100 border border-cyan-300 font-mono text-xs font-bold text-cyan-900">MySQL</span>
-            <span class="px-3 py-1 rounded-md bg-blue-100 border border-blue-300 font-mono text-xs font-bold text-blue-900">SQL Server</span>
-            <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">SQL Queries</span>
-          </div>
-          <p class="text-xs text-slate-600 mt-auto leading-relaxed font-medium">DDL, joins, indexing, transactional integrity, and CRUD query writing.</p>
-        </div>
-
-        <!-- Category 5: Developer Tools & Ecosystem (Col-span 2) -->
-        <div class="lg:col-span-2 elevated-card rounded-2xl p-6 border-t-4 border-t-rose-500 flex flex-col gap-4 reveal delay-200">
-          <div class="flex items-center justify-between">
-            <span class="font-heading font-extrabold text-slate-900">Developer Tools &amp; Ecosystem</span>
-            <div class="w-8 h-8 rounded-lg bg-rose-100 text-rose-700 flex items-center justify-center border border-rose-300 shadow-2xs"><span class="material-symbols-outlined text-[18px]">integration_instructions</span></div>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 rounded-md bg-rose-100 border border-rose-300 font-mono text-xs font-bold text-rose-900">Maven</span>
-            <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">Git</span>
-            <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">GitHub</span>
-            <span class="px-3 py-1 rounded-md bg-violet-100 border border-violet-300 font-mono text-xs font-bold text-violet-900">NetBeans</span>
-            <span class="px-3 py-1 rounded-md bg-violet-100 border border-violet-300 font-mono text-xs font-bold text-violet-900">Visual Studio</span>
-          </div>
-          <p class="text-xs text-slate-600 leading-relaxed font-medium">Maven for project artifact management; Git branching workflows and collaborative remote repositories.</p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ========================================================================= -->
     <!-- 5. ACADEMIC PROJECTS SECTION -->
     <!-- ========================================================================= -->
     <section class="flex flex-col gap-6" id="projects">
       <div class="flex flex-col gap-2 reveal">
-        <div class="flex items-center gap-2">
-          <span class="px-3 py-1 rounded-full bg-blue-600 text-white font-mono text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-2xs">
-            <span class="material-symbols-outlined text-[16px]">folder_special</span><span>Featured Projects</span>
-          </span>
-        </div>
+        <span class="font-mono text-xs font-semibold text-brand-600 tracking-wide">01 / projects</span>
         <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-950">Academic Projects</h2>
-        <p class="text-slate-700 text-sm sm:text-base font-medium">Production-style architecture implementations delivering real business domain logic.</p>
+        <p class="text-slate-700 text-sm sm:text-base font-medium">Group projects where I owned specific backend modules – my contributions are marked below.</p>
       </div>
 
       <div class="flex flex-col gap-8">
@@ -531,7 +304,7 @@
           <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b-2 border-slate-100">
             <div>
               <div class="flex items-center gap-2 mb-2 font-mono text-xs">
-                <span class="px-3 py-0.5 rounded-full bg-blue-100 text-brand-900 border border-blue-300 font-bold">PROJECT 01</span>
+                <span class="px-3 py-0.5 rounded-full bg-blue-100 text-brand-900 border border-blue-300 font-bold whitespace-nowrap">PROJECT 01</span>
                 <span class="text-slate-600 font-semibold">&bull; Role: Booking &amp; Payment Module Developer</span>
               </div>
               <h3 class="font-heading text-xl sm:text-2xl font-extrabold text-slate-900">
@@ -555,25 +328,26 @@
             <div class="lg:col-span-7 flex flex-col gap-4">
               <div>
                 <p class="text-slate-700 text-sm sm:text-base leading-relaxed font-medium mb-3">
-                  A responsive web-based travel tour booking management system using Java Web technologies and a layered MVC architecture. Features tour reservation workflows, date selection, price calculation, and payment status tracking.
+                  A web-based travel tour booking system built with Java, Spring MVC, JSP and MySQL on a layered MVC architecture.
                 </p>
                 <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1 rounded-md bg-amber-100 border border-amber-300 font-mono text-xs font-bold text-amber-900">Java</span>
-                  <span class="px-3 py-1 rounded-md bg-emerald-100 border border-emerald-300 font-mono text-xs font-bold text-emerald-900">Spring MVC</span>
+                  <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">Java</span>
+                  <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">Spring MVC</span>
                   <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">JSP &amp; Servlet</span>
-                  <span class="px-3 py-1 rounded-md bg-cyan-100 border border-cyan-300 font-mono text-xs font-bold text-cyan-900">MySQL</span>
-                  <span class="px-3 py-1 rounded-md bg-rose-100 border border-rose-300 font-mono text-xs font-bold text-rose-900">Maven</span>
+                  <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">MySQL</span>
+                  <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">Maven</span>
                 </div>
               </div>
 
               <div class="pt-2 border-t border-slate-200/80 flex flex-col gap-2.5">
                 <span class="font-mono text-xs font-bold text-slate-500 uppercase tracking-wider">Key Contributions</span>
                 <ul class="space-y-2 text-sm text-slate-700 font-medium">
-                  <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[18px] mt-0.5 shrink-0">check_circle</span><span>Engineered the complete Booking Flow allowing users to pick tour dates, input guest counts, calculate dynamic price aggregations, and generate confirmed booking orders.</span></li>
-                  <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[18px] mt-0.5 shrink-0">check_circle</span><span>Developed the Payment Processing Ledger module tracking multiple transaction methods (Bank Transfer, Credit Card, Cash) with real-time audit logs.</span></li>
-                  <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[18px] mt-0.5 shrink-0">check_circle</span><span>Built back-office Booking Management dashboards with real-time status transitions (Pending ➔ Confirmed ➔ Paid ➔ Cancelled) and dynamic filtering.</span></li>
-                  <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[18px] mt-0.5 shrink-0">check_circle</span><span>Designed the relational database schema in MySQL, defining primary/foreign keys, cascade behaviors, and indexing for fast query performance.</span></li>
-                  <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[18px] mt-0.5 shrink-0">check_circle</span><span>Structured clean Controller-Service-DAO separation, ensuring business logic isolation from web presentation layers.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[18px] mt-0.5 shrink-0">check_circle</span><span>Built the booking flow: tour date selection, traveler count, total price calculation and booking creation.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[18px] mt-0.5 shrink-0">check_circle</span><span>Wrapped booking and payment creation in a single database transaction with rollback on failure.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[18px] mt-0.5 shrink-0">check_circle</span><span>Prevented overbooking by checking remaining tour capacity and releasing seats on cancellation.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[18px] mt-0.5 shrink-0">check_circle</span><span>Enforced the booking lifecycle (Pending ➔ Confirmed ➔ Completed / Cancelled), rejecting invalid transitions.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[18px] mt-0.5 shrink-0">check_circle</span><span>Recorded payments with method (Bank Transfer, Visa card, E-wallet) and status – no external payment gateway – plus server-side input validation.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[18px] mt-0.5 shrink-0">check_circle</span><span>Designed the MySQL schema with primary/foreign keys and cascade rules.</span></li>
                 </ul>
               </div>
             </div>
@@ -594,7 +368,7 @@
                 </div>
 
                 <div class="relative w-full h-64 sm:h-72 lg:h-[285px] bg-gradient-to-b from-slate-900 to-slate-950 flex items-center justify-center p-3 overflow-hidden">
-                  <img id="tour-gallery-img" src="assets/voyager-elite/booking-flow.png" onerror="if(this.src!=='https://duykhoi-portfolio.netlify.app/assets/voyager-elite/booking-flow.png')this.src='https://duykhoi-portfolio.netlify.app/assets/voyager-elite/booking-flow.png';" alt="VoyagerElite UI Screenshot" class="max-w-full max-h-full w-auto h-auto object-contain rounded shadow-lg transition-all duration-300 cursor-pointer hover:scale-[1.01]" onclick="openImageLightbox('tour')" title="Bấm để phóng to ảnh toàn màn hình" />
+                  <img id="tour-gallery-img" loading="lazy" src="assets/voyager-elite/booking-flow.webp" onerror="if(this.src!=='https://duykhoi-portfolio.netlify.app/assets/voyager-elite/booking-flow.webp')this.src='https://duykhoi-portfolio.netlify.app/assets/voyager-elite/booking-flow.webp';" alt="VoyagerElite UI Screenshot" class="max-w-full max-h-full w-auto h-auto object-contain rounded shadow-lg transition-all duration-300 cursor-pointer hover:scale-[1.01]" onclick="openImageLightbox('tour')" title="Click to view full screen" />
 
                   <button onclick="prevGallery('tour')" aria-label="Previous image" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-900/85 hover:bg-brand-600 text-white flex items-center justify-center backdrop-blur-md border border-white/20 shadow-md transition-all active:scale-90 cursor-pointer opacity-90 group-hover:opacity-100" type="button">
                     <span class="material-symbols-outlined text-[18px]">chevron_left</span>
@@ -606,10 +380,10 @@
                   <div class="absolute bottom-2 left-2 right-2 bg-slate-900/90 backdrop-blur-md px-3 py-1.5 rounded-lg text-xs font-mono font-bold text-white shadow-lg border border-white/15 flex items-center justify-between gap-2">
                     <div class="flex items-center gap-1.5 truncate">
                       <span class="material-symbols-outlined text-[15px] text-brand-400 shrink-0">collections</span>
-                      <span id="tour-gallery-caption" class="truncate font-sans text-xs font-medium">Tour Booking Interface (Lead by Duy Khôi)</span>
+                      <span id="tour-gallery-caption" class="truncate font-sans text-xs font-medium">Tour Booking Interface (Led by Duy Khôi)</span>
                     </div>
                     <button onclick="openImageLightbox('tour')" class="shrink-0 text-xs text-brand-400 hover:text-brand-300 hover:underline flex items-center gap-0.5 cursor-pointer font-sans font-bold" type="button">
-                      <span>Phóng to</span><span class="material-symbols-outlined text-[13px]">open_in_full</span>
+                      <span>Zoom</span><span class="material-symbols-outlined text-[13px]">open_in_full</span>
                     </button>
                   </div>
                 </div>
@@ -639,16 +413,16 @@
                 <span class="text-slate-500 font-semibold text-[10px]">JSP &bull; JSTL &bull; Forms</span>
               </div>
               <div class="p-2.5 rounded-lg bg-blue-50 border border-blue-200 shadow-2xs flex flex-col justify-center">
-                <span class="font-extrabold text-brand-950 text-xs">2. Web Controller</span>
+                <span class="font-extrabold text-slate-900 text-xs">2. Web Controller</span>
                 <span class="text-brand-700 font-bold text-[10px]">Spring MVC &bull; Routing</span>
               </div>
-              <div class="p-2.5 rounded-lg bg-indigo-50 border border-indigo-200 shadow-2xs flex flex-col justify-center">
-                <span class="font-extrabold text-indigo-950 text-xs">3. Service Domain</span>
-                <span class="text-indigo-700 font-bold text-[10px]">Business Logic &bull; Tx</span>
+              <div class="p-2.5 rounded-lg bg-blue-50 border border-blue-200 shadow-2xs flex flex-col justify-center">
+                <span class="font-extrabold text-blue-950 text-xs">3. Service Domain</span>
+                <span class="text-blue-700 font-bold text-[10px]">Business Logic &bull; Tx</span>
               </div>
-              <div class="p-2.5 rounded-lg bg-emerald-50 border border-emerald-300 shadow-2xs flex flex-col justify-center">
-                <span class="font-extrabold text-emerald-950 text-xs">4. MySQL Database</span>
-                <span class="text-emerald-800 font-bold text-[10px]">DAO &bull; Relational Data</span>
+              <div class="p-2.5 rounded-lg bg-blue-50 border border-blue-200 shadow-2xs flex flex-col justify-center">
+                <span class="font-extrabold text-blue-950 text-xs">4. MySQL Database</span>
+                <span class="text-blue-800 font-bold text-[10px]">DAO &bull; Relational Data</span>
               </div>
             </div>
           </div>
@@ -658,24 +432,24 @@
         <!-- ===================================================================== -->
         <!-- Project 2: The Chill Rest -->
         <!-- ===================================================================== -->
-        <div class="elevated-card rounded-2xl p-6 sm:p-8 border-t-4 border-t-cyan-600 flex flex-col gap-6 reveal">
+        <div class="elevated-card rounded-2xl p-6 sm:p-8 border-t-4 border-t-blue-600 flex flex-col gap-6 reveal">
           
           <!-- Header -->
           <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b-2 border-slate-100">
             <div>
               <div class="flex items-center gap-2 mb-2 font-mono text-xs">
-                <span class="px-3 py-0.5 rounded-full bg-cyan-100 text-cyan-900 border border-cyan-300 font-bold">PROJECT 02</span>
-                <span class="text-slate-600 font-semibold">&bull; Role: Backend &amp; Database Developer</span>
+                <span class="px-3 py-0.5 rounded-full bg-blue-100 text-blue-900 border border-blue-300 font-bold whitespace-nowrap">PROJECT 02</span>
+                <span class="text-slate-600 font-semibold">&bull; Role: Database Design, Menu Management &amp; Revenue Report</span>
               </div>
               <h3 class="font-heading text-xl sm:text-2xl font-extrabold text-slate-900">
                 The Chill Rest. &ndash; Restaurant Management App
               </h3>
             </div>
             <div class="flex items-center gap-3">
-              <a class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-white border border-slate-300 hover:border-cyan-600 hover:text-cyan-700 text-slate-700 font-mono text-xs font-semibold transition-all shadow-2xs" href="https://github.com/DuyKhoi282/Restaurant-App" rel="noopener noreferrer" target="_blank">
+              <a class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-white border border-slate-300 hover:border-blue-600 hover:text-blue-700 text-slate-700 font-mono text-xs font-semibold transition-all shadow-2xs" href="https://github.com/DuyKhoi282/Restaurant-App" rel="noopener noreferrer" target="_blank">
                 <span class="material-symbols-outlined text-[16px]">code</span><span>GitHub Repo</span>
               </a>
-              <button onclick="openProjectDetails('restaurant')" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-cyan-700 hover:bg-cyan-800 text-white text-xs font-bold transition-all cursor-pointer font-mono shadow-xs active:scale-95" type="button">
+              <button onclick="openProjectDetails('restaurant')" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-blue-700 hover:bg-blue-800 text-white text-xs font-bold transition-all cursor-pointer font-mono shadow-xs active:scale-95" type="button">
                 <span>View Specs</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span>
               </button>
             </div>
@@ -688,24 +462,24 @@
             <div class="lg:col-span-7 flex flex-col gap-4">
               <div>
                 <p class="text-slate-700 text-sm sm:text-base leading-relaxed font-medium mb-3">
-                  A desktop restaurant management and ordering application developed with C# WinForms and SQL Server. Features order creation ("Tạo đơn"), service ratings ("Đánh giá dịch vụ"), menu item cataloging, and automated Excel reporting.
+                  A desktop restaurant management and ordering application developed with C# WinForms and SQL Server. Features ordering, service ratings, menu management and Excel revenue reports.
                 </p>
                 <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1 rounded-md bg-purple-100 border border-purple-300 font-mono text-xs font-bold text-purple-900">C#</span>
-                  <span class="px-3 py-1 rounded-md bg-indigo-100 border border-indigo-300 font-mono text-xs font-bold text-indigo-900">WinForms</span>
-                  <span class="px-3 py-1 rounded-md bg-blue-100 border border-blue-300 font-mono text-xs font-bold text-blue-900">SQL Server</span>
-                  <span class="px-3 py-1 rounded-md bg-emerald-100 border border-emerald-300 font-mono text-xs font-bold text-emerald-900">EPPlus</span>
+                  <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">C#</span>
+                  <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">WinForms</span>
+                  <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">SQL Server</span>
+                  <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">EPPlus</span>
                 </div>
               </div>
 
               <div class="pt-2 border-t border-slate-200/80 flex flex-col gap-2.5">
                 <span class="font-mono text-xs font-bold text-slate-500 uppercase tracking-wider">Key Contributions</span>
                 <ul class="space-y-2 text-sm text-slate-700 font-medium">
-                  <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[18px] mt-0.5 shrink-0">check_circle</span><span>Designed the relational database schema in SQL Server, establishing constraints, tables, and test datasets.</span></li>
-                  <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[18px] mt-0.5 shrink-0">check_circle</span><span>Developed the Menu Management module with full CRUD operations for dishes and categories.</span></li>
-                  <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[18px] mt-0.5 shrink-0">check_circle</span><span>Implemented accent-insensitive search using SQL collation (Latin1_General_CI_AI) and parameterized queries against SQL Injection.</span></li>
-                  <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[18px] mt-0.5 shrink-0">check_circle</span><span>Built safe-deletion business logic verifying unpaid orders to maintain transactional data integrity.</span></li>
-                  <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[18px] mt-0.5 shrink-0">check_circle</span><span>Orchestrated main application navigation and maintained Git repository standards and merge integration.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[18px] mt-0.5 shrink-0">check_circle</span><span>Designed the SQL Server schema with PK/FK constraints and test datasets.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[18px] mt-0.5 shrink-0">check_circle</span><span>Developed Menu Management with full CRUD for dishes and categories.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[18px] mt-0.5 shrink-0">check_circle</span><span>Implemented accent-insensitive search via SQL collation (Latin1_General_CI_AI) and parameterized queries against SQL Injection.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[18px] mt-0.5 shrink-0">check_circle</span><span>Built safe-deletion logic that blocks deleting dishes referenced by unpaid orders.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[18px] mt-0.5 shrink-0">check_circle</span><span>Built the Revenue Report: date-range SUM/COUNT aggregation and Excel export with EPPlus.</span></li>
                 </ul>
               </div>
 
@@ -713,16 +487,16 @@
               <div class="pt-2 border-t border-slate-200/80 flex flex-col gap-1.5">
                 <span class="font-mono text-xs font-bold text-slate-500 uppercase tracking-wider">Quick Diagram Switcher</span>
                 <div class="flex flex-wrap gap-2 text-xs font-mono">
-                  <button onclick="setGalleryImage('restaurant', 4)" class="py-1.5 px-3 rounded-lg bg-indigo-50 hover:bg-indigo-100 text-indigo-900 font-bold border border-indigo-300 transition-all flex items-center gap-1.5 cursor-pointer active:scale-95 shadow-2xs" type="button">
-                    <span class="material-symbols-outlined text-[16px] text-indigo-700">account_tree</span>
+                  <button onclick="setGalleryImage('restaurant', 4)" class="py-1.5 px-3 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-900 font-bold border border-blue-300 transition-all flex items-center gap-1.5 cursor-pointer active:scale-95 shadow-2xs" type="button">
+                    <span class="material-symbols-outlined text-[16px] text-blue-700">account_tree</span>
                     <span>Class Diagram</span>
                   </button>
-                  <button onclick="setGalleryImage('restaurant', 5)" class="py-1.5 px-3 rounded-lg bg-cyan-50 hover:bg-cyan-100 text-cyan-900 font-bold border border-cyan-300 transition-all flex items-center gap-1.5 cursor-pointer active:scale-95 shadow-2xs" type="button">
-                    <span class="material-symbols-outlined text-[16px] text-cyan-700">schema</span>
+                  <button onclick="setGalleryImage('restaurant', 5)" class="py-1.5 px-3 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-900 font-bold border border-blue-300 transition-all flex items-center gap-1.5 cursor-pointer active:scale-95 shadow-2xs" type="button">
+                    <span class="material-symbols-outlined text-[16px] text-blue-700">schema</span>
                     <span>Sequence Diagram</span>
                   </button>
-                  <button onclick="setGalleryImage('restaurant', 6)" class="py-1.5 px-3 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-900 font-bold border border-emerald-300 transition-all flex items-center gap-1.5 cursor-pointer active:scale-95 shadow-2xs" type="button">
-                    <span class="material-symbols-outlined text-[16px] text-emerald-700">table_chart</span>
+                  <button onclick="setGalleryImage('restaurant', 6)" class="py-1.5 px-3 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-900 font-bold border border-blue-300 transition-all flex items-center gap-1.5 cursor-pointer active:scale-95 shadow-2xs" type="button">
+                    <span class="material-symbols-outlined text-[16px] text-blue-700">table_chart</span>
                     <span>ERD Schema</span>
                   </button>
                 </div>
@@ -731,7 +505,7 @@
 
             <!-- Right Column: Interactive Showcase -->
             <div class="lg:col-span-5 flex flex-col gap-3">
-              <div class="rounded-2xl overflow-hidden border-2 border-slate-300 shadow-md relative group bg-slate-950 transition-all duration-300 hover:border-cyan-500">
+              <div class="rounded-2xl overflow-hidden border-2 border-slate-300 shadow-md relative group bg-slate-950 transition-all duration-300 hover:border-blue-500">
                 <div class="bg-slate-900/95 border-b border-white/10 px-3.5 py-2 flex items-center justify-between">
                   <div class="flex items-center gap-1.5">
                     <span class="w-2.5 h-2.5 rounded-full bg-rose-500/80 inline-block"></span>
@@ -739,34 +513,34 @@
                     <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block"></span>
                     <span class="ml-1.5 font-mono text-[10px] font-bold text-slate-400 hidden sm:inline truncate max-w-[130px]">the-chill-rest</span>
                   </div>
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-cyan-950/80 text-cyan-400 border border-cyan-800">
+                  <span class="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-blue-950/80 text-blue-400 border border-blue-800">
                     <span id="restaurant-gallery-counter">1 / 7</span> &bull; Showcase
                   </span>
                 </div>
 
                 <div class="relative w-full h-64 sm:h-72 lg:h-[285px] bg-gradient-to-b from-slate-900 to-slate-950 flex items-center justify-center p-3 overflow-hidden">
-                  <img id="restaurant-gallery-img" src="assets/the-chill-rest/menu-management.png" onerror="if(this.src!=='https://duykhoi-portfolio.netlify.app/assets/the-chill-rest/menu-management.png')this.src='https://duykhoi-portfolio.netlify.app/assets/the-chill-rest/menu-management.png';" alt="The Chill Rest UI Screenshot" class="max-w-full max-h-full w-auto h-auto object-contain rounded shadow-lg transition-all duration-300 cursor-pointer hover:scale-[1.01]" onclick="openImageLightbox('restaurant')" title="Bấm để phóng to ảnh toàn màn hình" />
+                  <img id="restaurant-gallery-img" loading="lazy" src="assets/the-chill-rest/menu-management.webp" onerror="if(this.src!=='https://duykhoi-portfolio.netlify.app/assets/the-chill-rest/menu-management.webp')this.src='https://duykhoi-portfolio.netlify.app/assets/the-chill-rest/menu-management.webp';" alt="The Chill Rest UI Screenshot" class="max-w-full max-h-full w-auto h-auto object-contain rounded shadow-lg transition-all duration-300 cursor-pointer hover:scale-[1.01]" onclick="openImageLightbox('restaurant')" title="Click to view full screen" />
 
-                  <button onclick="prevGallery('restaurant')" aria-label="Previous image" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-900/85 hover:bg-cyan-600 text-white flex items-center justify-center backdrop-blur-md border border-white/20 shadow-md transition-all active:scale-90 cursor-pointer opacity-90 group-hover:opacity-100" type="button">
+                  <button onclick="prevGallery('restaurant')" aria-label="Previous image" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-900/85 hover:bg-blue-600 text-white flex items-center justify-center backdrop-blur-md border border-white/20 shadow-md transition-all active:scale-90 cursor-pointer opacity-90 group-hover:opacity-100" type="button">
                     <span class="material-symbols-outlined text-[18px]">chevron_left</span>
                   </button>
-                  <button onclick="nextGallery('restaurant')" aria-label="Next image" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-900/85 hover:bg-cyan-600 text-white flex items-center justify-center backdrop-blur-md border border-white/20 shadow-md transition-all active:scale-90 cursor-pointer opacity-90 group-hover:opacity-100" type="button">
+                  <button onclick="nextGallery('restaurant')" aria-label="Next image" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-900/85 hover:bg-blue-600 text-white flex items-center justify-center backdrop-blur-md border border-white/20 shadow-md transition-all active:scale-90 cursor-pointer opacity-90 group-hover:opacity-100" type="button">
                     <span class="material-symbols-outlined text-[18px]">chevron_right</span>
                   </button>
 
                   <div class="absolute bottom-2 left-2 right-2 bg-slate-900/90 backdrop-blur-md px-3 py-1.5 rounded-lg text-xs font-mono font-bold text-white shadow-lg border border-white/15 flex items-center justify-between gap-2">
                     <div class="flex items-center gap-1.5 truncate">
-                      <span class="material-symbols-outlined text-[15px] text-cyan-400 shrink-0">collections</span>
-                      <span id="restaurant-gallery-caption" class="truncate font-sans text-xs font-medium">Menu Management (Lead by Duy Khôi)</span>
+                      <span class="material-symbols-outlined text-[15px] text-blue-400 shrink-0">collections</span>
+                      <span id="restaurant-gallery-caption" class="truncate font-sans text-xs font-medium">Menu Management (Led by Duy Khôi)</span>
                     </div>
-                    <button onclick="openImageLightbox('restaurant')" class="shrink-0 text-xs text-cyan-400 hover:text-cyan-300 hover:underline flex items-center gap-0.5 cursor-pointer font-sans font-bold" type="button">
-                      <span>Phóng to</span><span class="material-symbols-outlined text-[13px]">open_in_full</span>
+                    <button onclick="openImageLightbox('restaurant')" class="shrink-0 text-xs text-blue-400 hover:text-blue-300 hover:underline flex items-center gap-0.5 cursor-pointer font-sans font-bold" type="button">
+                      <span>Zoom</span><span class="material-symbols-outlined text-[13px]">open_in_full</span>
                     </button>
                   </div>
                 </div>
 
                 <div class="bg-slate-900/95 border-t border-white/10 px-3 py-2 flex items-center justify-center gap-1.5" id="restaurant-gallery-dots">
-                  <button onclick="setGalleryImage('restaurant', 0)" class="restaurant-dot w-5 h-1.5 rounded-full bg-cyan-400 transition-all cursor-pointer" title="Slide 1"></button>
+                  <button onclick="setGalleryImage('restaurant', 0)" class="restaurant-dot w-5 h-1.5 rounded-full bg-blue-400 transition-all cursor-pointer" title="Slide 1"></button>
                   <button onclick="setGalleryImage('restaurant', 1)" class="restaurant-dot w-1.5 h-1.5 rounded-full bg-white/40 hover:bg-white transition-all cursor-pointer" title="Slide 2"></button>
                   <button onclick="setGalleryImage('restaurant', 2)" class="restaurant-dot w-1.5 h-1.5 rounded-full bg-white/40 hover:bg-white transition-all cursor-pointer" title="Slide 3"></button>
                   <button onclick="setGalleryImage('restaurant', 3)" class="restaurant-dot w-1.5 h-1.5 rounded-full bg-white/40 hover:bg-white transition-all cursor-pointer" title="Slide 4"></button>
@@ -783,24 +557,24 @@
           <div class="rounded-xl border-2 border-slate-200 bg-slate-50/70 p-4 flex flex-col gap-2.5 shadow-2xs">
             <div class="flex items-center justify-between pb-1.5 border-b border-slate-200">
               <span class="font-mono text-xs font-bold text-slate-700 uppercase tracking-wider">3-Tier Desktop Architecture</span>
-              <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-cyan-100 text-cyan-900 border border-cyan-300">C# .NET &amp; SQL Server</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-blue-100 text-blue-900 border border-blue-300">C# .NET &amp; SQL Server</span>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-4 gap-2 font-mono text-xs text-center">
               <div class="p-2.5 rounded-lg bg-white border border-slate-300 shadow-2xs flex flex-col justify-center">
                 <span class="font-bold text-slate-900 text-xs">1. Presentation Layer</span>
                 <span class="text-slate-500 font-semibold text-[10px]">WinForms GUI &bull; frmMain</span>
               </div>
-              <div class="p-2.5 rounded-lg bg-indigo-50 border border-indigo-200 shadow-2xs flex flex-col justify-center">
-                <span class="font-extrabold text-indigo-950 text-xs">2. Business Logic (BUS)</span>
-                <span class="text-indigo-700 font-bold text-[10px]">Validation &bull; Safeguards</span>
+              <div class="p-2.5 rounded-lg bg-blue-50 border border-blue-200 shadow-2xs flex flex-col justify-center">
+                <span class="font-extrabold text-blue-950 text-xs">2. Business Logic (BUS)</span>
+                <span class="text-blue-700 font-bold text-[10px]">Validation &bull; Safeguards</span>
               </div>
               <div class="p-2.5 rounded-lg bg-blue-50 border border-blue-200 shadow-2xs flex flex-col justify-center">
                 <span class="font-extrabold text-blue-950 text-xs">3. Data Access (DAL/DTO)</span>
                 <span class="text-blue-700 font-bold text-[10px]">ADO.NET &bull; Parameterized</span>
               </div>
-              <div class="p-2.5 rounded-lg bg-emerald-50 border border-emerald-300 shadow-2xs flex flex-col justify-center">
-                <span class="font-extrabold text-emerald-950 text-xs">4. SQL Server 2022</span>
-                <span class="text-emerald-800 font-bold text-[10px]">ACID Relational DB</span>
+              <div class="p-2.5 rounded-lg bg-blue-50 border border-blue-200 shadow-2xs flex flex-col justify-center">
+                <span class="font-extrabold text-blue-950 text-xs">4. SQL Server 2022</span>
+                <span class="text-blue-800 font-bold text-[10px]">ACID Relational DB</span>
               </div>
             </div>
           </div>
@@ -811,15 +585,160 @@
     </section>
 
     <!-- ========================================================================= -->
+    <!-- 4. TECHNICAL SKILLS SECTION (5-Category Bento) -->
+    <!-- ========================================================================= -->
+    <section class="flex flex-col gap-6" id="skills">
+      <div class="flex flex-col gap-2 reveal">
+        <span class="font-mono text-xs font-semibold text-brand-600 tracking-wide">02 / skills</span>
+        <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-950">Technical Skills</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        
+        <!-- Category 1: Languages -->
+        <div class="elevated-card rounded-2xl p-6 flex flex-col gap-4 reveal delay-100">
+          <div class="flex items-center justify-between">
+            <span class="font-heading font-extrabold text-slate-900">Programming Languages</span>
+            <div class="w-8 h-8 rounded-lg bg-brand-50 text-brand-700 flex items-center justify-center border border-brand-100 shadow-2xs"><span class="material-symbols-outlined text-[18px]">terminal</span></div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">Java</span>
+            <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">C#</span>
+            <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">SQL</span>
+          </div>
+          <p class="text-xs text-slate-600 mt-auto leading-relaxed font-medium">OOP, collections, and exception handling.</p>
+        </div>
+
+        <!-- Category 2: Backend & Web -->
+        <div class="elevated-card rounded-2xl p-6 flex flex-col gap-4 reveal delay-200">
+          <div class="flex items-center justify-between">
+            <span class="font-heading font-extrabold text-slate-900">Backend &amp; Web</span>
+            <div class="w-8 h-8 rounded-lg bg-brand-50 text-brand-700 flex items-center justify-center border border-brand-100 shadow-2xs"><span class="material-symbols-outlined text-[18px]">dns</span></div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">Spring MVC</span>
+            <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">Spring Boot</span>
+            <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">JPA / Hibernate</span>
+            <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">JSP</span>
+            <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">Servlet</span>
+          </div>
+          <p class="text-xs text-slate-600 mt-auto leading-relaxed font-medium">Request mapping, dependency injection, and layered services.</p>
+        </div>
+
+        <!-- Category 3: Architecture & Design -->
+        <div class="elevated-card rounded-2xl p-6 flex flex-col gap-4 reveal delay-300">
+          <div class="flex items-center justify-between">
+            <span class="font-heading font-extrabold text-slate-900">Architecture &amp; Design</span>
+            <div class="w-8 h-8 rounded-lg bg-brand-50 text-brand-700 flex items-center justify-center border border-brand-100 shadow-2xs"><span class="material-symbols-outlined text-[18px]">account_tree</span></div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs text-slate-800 font-bold">MVC Architecture</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs text-slate-800 font-bold">Layered (Controller–Service–DAO)</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs text-slate-800 font-bold">Database Design</span>
+          </div>
+          <p class="text-xs text-slate-600 mt-auto leading-relaxed font-medium">Separating presentation, business logic, and data access.</p>
+        </div>
+
+        <!-- Category 4: Databases -->
+        <div class="elevated-card rounded-2xl p-6 flex flex-col gap-4 reveal delay-100">
+          <div class="flex items-center justify-between">
+            <span class="font-heading font-extrabold text-slate-900">Databases</span>
+            <div class="w-8 h-8 rounded-lg bg-brand-50 text-brand-700 flex items-center justify-center border border-brand-100 shadow-2xs"><span class="material-symbols-outlined text-[18px]">storage</span></div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">MySQL</span>
+            <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">SQL Server</span>
+            <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">JOINs</span>
+            <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">Transactions</span>
+          </div>
+          <p class="text-xs text-slate-600 mt-auto leading-relaxed font-medium">Schema design, PK/FK constraints, and parameterized queries.</p>
+        </div>
+
+        <!-- Category 5: Developer Tools & Ecosystem (Col-span 2) -->
+        <div class="lg:col-span-2 elevated-card rounded-2xl p-6 flex flex-col gap-4 reveal delay-200">
+          <div class="flex items-center justify-between">
+            <span class="font-heading font-extrabold text-slate-900">Developer Tools &amp; Ecosystem</span>
+            <div class="w-8 h-8 rounded-lg bg-brand-50 text-brand-700 flex items-center justify-center border border-brand-100 shadow-2xs"><span class="material-symbols-outlined text-[18px]">integration_instructions</span></div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">Maven</span>
+            <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">Git</span>
+            <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">GitHub</span>
+            <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">NetBeans</span>
+            <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">Visual Studio</span>
+            <span class="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 font-mono text-xs font-bold text-slate-800">EPPlus</span>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed font-medium">Maven for project artifact management; Git branching workflows and collaborative remote repositories.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 3. ABOUT ME SECTION -->
+    <!-- ========================================================================= -->
+    <section class="flex flex-col gap-6" id="about">
+      <div class="flex flex-col gap-2 reveal">
+        <span class="font-mono text-xs font-semibold text-brand-600 tracking-wide">03 / about</span>
+        <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-950">About Me</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        
+        <!-- Left: Narrative & Callout -->
+        <div class="lg:col-span-6 p-6 sm:p-7 rounded-2xl elevated-card flex flex-col gap-5 reveal delay-100">
+          <div class="flex items-center gap-4 pb-4 border-b border-slate-200">
+            <img src="assets/avatar.jpg" onerror="if(this.src!=='https://duykhoi-portfolio.netlify.app/assets/avatar.jpg')this.src='https://duykhoi-portfolio.netlify.app/assets/avatar.jpg';" alt="Tran Quoc Duy Khoi" loading="lazy" class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl object-cover object-[center_35%] border-2 border-brand-500 shadow-md ring-4 ring-brand-100 shrink-0" />
+            <div>
+              <h3 class="font-heading font-extrabold text-slate-900 text-lg sm:text-xl">Tran Quoc Duy Khoi</h3>
+              <p class="font-mono text-xs text-brand-700 font-bold flex items-center gap-1.5 mt-0.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                <span>Java Backend Intern &bull; UEF 2027</span>
+              </p>
+            </div>
+          </div>
+          
+          <p class="text-slate-800 text-base leading-relaxed font-medium">
+            I'm a final-year IT student at the <strong class="text-slate-950 font-extrabold">University of Economics and Finance (UEF)</strong>, focused on Java backend development. I've built layered web and desktop applications with Java, Spring MVC, MySQL, C# and SQL Server, designing relational schemas and writing secure, parameterized SQL. I'm looking for a full-time Java Backend internship where I can build production-grade services with Spring Boot.
+          </p>
+        </div>
+
+        <!-- Right: 4 Metric Cards -->
+        <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="p-5 rounded-2xl elevated-card border-l-4 border-l-brand-600 flex flex-col gap-1 reveal delay-100">
+            <span class="font-mono text-[11px] text-slate-500 uppercase tracking-wider font-bold">Education</span>
+            <div class="flex items-center gap-2 mt-1"><span class="material-symbols-outlined text-brand-600 text-[22px]">school</span><span class="font-heading font-extrabold text-slate-900 text-lg">UEF</span></div>
+            <p class="text-xs text-slate-600 mt-1 font-medium">University of Economics and Finance</p>
+          </div>
+
+          <div class="p-5 rounded-2xl elevated-card border-l-4 border-l-blue-600 flex flex-col gap-1 reveal delay-200">
+            <span class="font-mono text-[11px] text-slate-500 uppercase tracking-wider font-bold">Graduation</span>
+            <div class="flex items-center gap-2 mt-1"><span class="material-symbols-outlined text-brand-600 text-[22px]">event_available</span><span class="font-heading font-extrabold text-slate-900 text-lg">2027</span></div>
+            <p class="text-xs text-slate-600 mt-1 font-medium">Expected undergraduate completion</p>
+          </div>
+
+          <div class="p-5 rounded-2xl elevated-card border-l-4 border-l-blue-600 flex flex-col gap-1 reveal delay-300">
+            <span class="font-mono text-[11px] text-slate-500 uppercase tracking-wider font-bold">Target Role</span>
+            <div class="flex items-center gap-2 mt-1"><span class="material-symbols-outlined text-blue-600 text-[22px]">developer_mode_tv</span><span class="font-heading font-extrabold text-slate-900 text-lg">Backend Intern</span></div>
+            <p class="text-xs text-slate-600 mt-1 font-medium">Java Backend Developer Intern</p>
+          </div>
+
+          <div class="p-5 rounded-2xl elevated-card border-l-4 border-l-brand-600 flex flex-col gap-1 reveal delay-400">
+            <span class="font-mono text-[11px] text-slate-500 uppercase tracking-wider font-bold">Availability</span>
+            <div class="flex items-center gap-2 mt-1"><span class="material-symbols-outlined text-brand-600 text-[22px]">schedule</span><span class="font-heading font-extrabold text-slate-900 text-lg">Full-time</span></div>
+            <p class="text-xs text-slate-600 mt-1 font-medium">Full-time Internship engagement</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
     <!-- 6. CERTIFICATIONS & LANGUAGES (VSTEP + IELTS) -->
     <!-- ========================================================================= -->
     <section class="flex flex-col gap-6" id="certifications">
       <div class="flex flex-col gap-2 reveal">
-        <div class="flex items-center gap-2">
-          <span class="px-3 py-1 rounded-full bg-blue-600 text-white font-mono text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-2xs">
-            <span class="material-symbols-outlined text-[16px]">verified</span><span>Qualifications</span>
-          </span>
-        </div>
+        <span class="font-mono text-xs font-semibold text-brand-600 tracking-wide">04 / certifications</span>
         <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-950">Certifications &amp; Languages</h2>
       </div>
 
@@ -837,21 +756,21 @@
                 <h3 class="font-heading font-extrabold text-slate-950 text-xl">VSTEP 7.0</h3>
               </div>
             </div>
-            <span class="px-3 py-1 rounded-full font-mono text-xs bg-blue-100 text-brand-900 border border-blue-300 font-extrabold">Level C1 Equivalent</span>
+            <span class="px-3 py-1 rounded-full font-mono text-xs bg-blue-100 text-brand-900 border border-blue-300 font-extrabold">CEFR B2</span>
           </div>
           <div class="pt-3.5 border-t-2 border-slate-100 flex items-center justify-between text-xs font-mono text-slate-600 font-medium">
             <span>Issued: 2026</span>
             <span class="text-emerald-700 font-bold flex items-center gap-1">
-              <span class="material-symbols-outlined text-[16px]">check_circle</span><span>Verified Score</span>
+              <span class="material-symbols-outlined text-[16px]">check_circle</span><span>Score 7.0 / 10</span>
             </span>
           </div>
         </div>
 
         <!-- Credential 2: IELTS 5.5 -->
-        <div class="elevated-card rounded-2xl p-6 border-l-4 border-l-cyan-600 flex flex-col justify-between gap-5 reveal delay-200">
+        <div class="elevated-card rounded-2xl p-6 border-l-4 border-l-blue-600 flex flex-col justify-between gap-5 reveal delay-200">
           <div class="flex items-start justify-between">
             <div class="flex items-center gap-3.5">
-              <div class="w-12 h-12 rounded-xl bg-cyan-100 border-2 border-cyan-300 text-cyan-700 flex items-center justify-center shadow-2xs">
+              <div class="w-12 h-12 rounded-xl bg-blue-100 border-2 border-blue-300 text-blue-700 flex items-center justify-center shadow-2xs">
                 <span class="material-symbols-outlined text-2xl">language</span>
               </div>
               <div>
@@ -859,7 +778,6 @@
                 <h3 class="font-heading font-extrabold text-slate-950 text-xl">IELTS 5.5</h3>
               </div>
             </div>
-            <span class="px-3 py-1 rounded-full font-mono text-xs bg-slate-100 text-slate-800 border border-slate-300 font-bold">General Academic</span>
           </div>
           <div class="pt-3.5 border-t-2 border-slate-100 flex items-center justify-between text-xs font-mono text-slate-600 font-medium">
             <span>Issued: 2022</span>
@@ -877,26 +795,22 @@
     <!-- ========================================================================= -->
     <section class="flex flex-col gap-6" id="achievements">
       <div class="flex flex-col gap-2 reveal">
-        <div class="flex items-center gap-2">
-          <span class="px-3 py-1 rounded-full bg-amber-600 text-white font-mono text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-2xs">
-            <span class="material-symbols-outlined text-[16px]">military_tech</span><span>Recognition</span>
-          </span>
-        </div>
+        <span class="font-mono text-xs font-semibold text-brand-600 tracking-wide">05 / achievements</span>
         <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-950">Achievements</h2>
       </div>
 
-      <div class="elevated-card rounded-2xl p-6 sm:p-8 border-l-4 border-l-amber-500 flex flex-col md:flex-row items-start md:items-center gap-6 reveal delay-100">
-        <div class="w-16 h-16 rounded-2xl bg-amber-100 border-2 border-amber-300 text-amber-600 flex items-center justify-center shrink-0 shadow-xs">
+      <div class="elevated-card rounded-2xl p-6 sm:p-8 border-l-4 border-l-brand-600 flex flex-col md:flex-row items-start md:items-center gap-6 reveal delay-100">
+        <div class="w-16 h-16 rounded-2xl bg-brand-50 border-2 border-brand-100 text-brand-600 flex items-center justify-center shrink-0 shadow-xs">
           <span class="material-symbols-outlined text-4xl">trophy</span>
         </div>
         <div class="flex flex-col gap-1.5 grow">
           <div class="flex items-center gap-2.5 flex-wrap">
-            <span class="px-3 py-0.5 rounded-full text-xs font-mono bg-amber-100 text-amber-900 border border-amber-300 font-extrabold">Competition Award</span>
+            <span class="px-3 py-0.5 rounded-full text-xs font-mono bg-slate-100 text-slate-800 border border-slate-300 font-extrabold">Competition Award</span>
             <span class="font-mono text-xs text-slate-600 font-bold">Year: 2025</span>
           </div>
           <h3 class="font-heading text-xl sm:text-2xl font-extrabold text-slate-950">Consolation Prize &mdash; Cybernet Competition 2025</h3>
           <p class="text-sm font-bold text-brand-700">University of Economics and Finance (UEF)</p>
-          <p class="text-xs sm:text-sm text-slate-700 max-w-2xl mt-1 leading-relaxed font-medium">Technical academic competition recognizing software architecture, network systems analysis, and computing problem solving under timed constraints.</p>
+          <p class="text-xs sm:text-sm text-slate-700 max-w-2xl mt-1 leading-relaxed font-medium">University-level cybersecurity competition (CTF-style), solving security challenges under time constraints.</p>
         </div>
       </div>
     </section>
@@ -906,18 +820,14 @@
     <!-- ========================================================================= -->
     <section class="flex flex-col gap-6" id="references">
       <div class="flex flex-col gap-2 reveal">
-        <div class="flex items-center gap-2">
-          <span class="px-3 py-1 rounded-full bg-emerald-600 text-white font-mono text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-2xs">
-            <span class="material-symbols-outlined text-[16px]">badge</span><span>Verification</span>
-          </span>
-        </div>
+        <span class="font-mono text-xs font-semibold text-brand-600 tracking-wide">06 / references</span>
         <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-950">Academic References</h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-        <div class="elevated-card rounded-2xl p-6 border-l-4 border-l-emerald-600 flex flex-col gap-4 reveal delay-100">
+        <div class="elevated-card rounded-2xl p-6 border-l-4 border-l-brand-600 flex flex-col gap-4 reveal delay-100">
           <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-xl bg-emerald-100 border-2 border-emerald-300 text-emerald-700 flex items-center justify-center shrink-0 shadow-2xs">
+            <div class="w-12 h-12 rounded-xl bg-brand-50 border-2 border-brand-100 text-brand-700 flex items-center justify-center shrink-0 shadow-2xs">
               <span class="material-symbols-outlined text-2xl">school</span>
             </div>
             <div>
@@ -941,11 +851,7 @@
     <!-- ========================================================================= -->
     <section class="flex flex-col gap-6" id="contact">
       <div class="flex flex-col gap-2 reveal">
-        <div class="flex items-center gap-2">
-          <span class="px-3 py-1 rounded-full bg-brand-600 text-white font-mono text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-2xs">
-            <span class="material-symbols-outlined text-[16px]">contact_mail</span><span>Reach Out</span>
-          </span>
-        </div>
+        <span class="font-mono text-xs font-semibold text-brand-600 tracking-wide">07 / contact</span>
         <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-950">Get In Touch</h2>
         <p class="text-slate-700 text-sm sm:text-base font-medium">Available for full-time internship opportunities. Feel free to reach out via email or phone.</p>
       </div>
@@ -955,21 +861,11 @@
         <!-- Left: Direct Coordinates Card -->
         <div class="lg:col-span-5 rounded-2xl elevated-card p-6 sm:p-7 border-t-4 border-t-brand-600 flex flex-col gap-5 reveal delay-100">
           <div>
-            <h3 class="font-heading font-extrabold text-slate-950 text-lg">Direct Coordinates</h3>
+            <h3 class="font-heading font-extrabold text-slate-950 text-lg">Contact Details</h3>
             <p class="text-xs text-slate-600 font-medium mt-1">Direct channels for recruiting and technical interviews.</p>
           </div>
 
           <div class="flex flex-col gap-3.5">
-            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-100 border-2 border-slate-200">
-              <div class="w-9 h-9 rounded-lg bg-white border border-slate-300 flex items-center justify-center text-brand-700 shadow-2xs">
-                <span class="material-symbols-outlined text-[20px]">person</span>
-              </div>
-              <div>
-                <span class="font-mono text-[10px] text-slate-500 block font-bold uppercase">Full Name</span>
-                <span class="font-heading text-sm text-slate-950 font-extrabold">Tran Quoc Duy Khoi</span>
-              </div>
-            </div>
-
             <div class="flex items-center justify-between p-3.5 rounded-xl bg-slate-100 border-2 border-slate-200">
               <div class="flex items-center gap-3 min-w-0">
                 <div class="w-9 h-9 rounded-lg bg-white border border-slate-300 flex items-center justify-center text-brand-700 shrink-0 shadow-2xs">
@@ -991,7 +887,7 @@
               </div>
               <div>
                 <span class="font-mono text-[10px] text-slate-500 block font-bold uppercase">Phone</span>
-                <a class="font-mono text-xs text-slate-950 font-extrabold hover:text-brand-600" href="tel:+840929648427">0929 648 427</a>
+                <a class="font-mono text-xs text-slate-950 font-extrabold hover:text-brand-600" href="tel:+84929648427">(+84) 929 648 427</a>
               </div>
             </div>
 
@@ -1086,7 +982,7 @@
           <span id="lightbox-counter" class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-white/10 text-slate-300 font-bold ml-1">1 / 6</span>
         </div>
         <div class="flex items-center gap-2">
-          <button onclick="closeLightboxModal()" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-rose-600 text-white flex items-center justify-center transition-colors cursor-pointer" type="button" title="Đóng (Esc)">
+          <button onclick="closeLightboxModal()" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-rose-600 text-white flex items-center justify-center transition-colors cursor-pointer" type="button" title="Close (Esc)">
             <span class="material-symbols-outlined text-[20px]">close</span>
           </button>
         </div>
@@ -1095,10 +991,10 @@
       <div class="relative w-full bg-slate-950 border-x border-white/10 flex items-center justify-center p-2 sm:p-4 max-h-[80vh] overflow-hidden">
         <img id="lightbox-img" src="" alt="Enlarged screenshot" class="max-w-full max-h-[76vh] w-auto h-auto object-contain rounded-lg shadow-2xl transition-all duration-200 select-none" />
 
-        <button onclick="lightboxPrev()" class="absolute left-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-slate-900/85 hover:bg-brand-600 text-white flex items-center justify-center backdrop-blur-md border border-white/20 shadow-2xl transition-all active:scale-90 cursor-pointer" type="button" title="Ảnh trước (Mũi tên trái)">
+        <button onclick="lightboxPrev()" class="absolute left-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-slate-900/85 hover:bg-brand-600 text-white flex items-center justify-center backdrop-blur-md border border-white/20 shadow-2xl transition-all active:scale-90 cursor-pointer" type="button" title="Previous (Left arrow)">
           <span class="material-symbols-outlined text-[26px]">chevron_left</span>
         </button>
-        <button onclick="lightboxNext()" class="absolute right-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-slate-900/85 hover:bg-brand-600 text-white flex items-center justify-center backdrop-blur-md border border-white/20 shadow-2xl transition-all active:scale-90 cursor-pointer" type="button" title="Ảnh tiếp theo (Mũi tên phải)">
+        <button onclick="lightboxNext()" class="absolute right-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-slate-900/85 hover:bg-brand-600 text-white flex items-center justify-center backdrop-blur-md border border-white/20 shadow-2xl transition-all active:scale-90 cursor-pointer" type="button" title="Next (Right arrow)">
           <span class="material-symbols-outlined text-[26px]">chevron_right</span>
         </button>
       </div>
@@ -1153,7 +1049,7 @@
             <h4 class="font-heading text-lg font-bold text-slate-950">Tran Quoc Duy Khoi</h4>
             <span class="px-2.5 py-0.5 rounded font-mono text-xs bg-brand-100 text-brand-800 font-bold">Java Backend Developer Intern</span>
           </div>
-          <p class="text-xs text-slate-600 font-mono font-medium">Ho Chi Minh City &bull; tranquocduykhoi@gmail.com &bull; 0929 648 427</p>
+          <p class="text-xs text-slate-600 font-mono font-medium">Ho Chi Minh City &bull; tranquocduykhoi@gmail.com &bull; (+84) 929 648 427</p>
           <p class="text-xs text-slate-600 font-mono font-medium">GitHub: github.com/DuyKhoi282 &bull; UEF &ndash; Expected 2027</p>
         </div>
 
@@ -1178,7 +1074,7 @@
         </div>
 
         <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600">
-          <strong>English Proficiency:</strong> VSTEP 7.0 (Level C1, 2026) &bull; IELTS 5.5 (General Academic, 2022).
+          <strong>English Proficiency:</strong> VSTEP 7.0/10 (CEFR B2, 2026) &bull; IELTS 5.5 (2022).
         </div>
       </div>
       <div class="px-6 py-4 border-t border-slate-200 bg-slate-50 flex items-center justify-end">
@@ -1194,10 +1090,9 @@
     // --- Primary Page Navigation & Dock ---
     const pageSections = [
       { id: 'home', title: 'Home' },
-      { id: 'objective', title: 'Objective' },
-      { id: 'about', title: 'About' },
-      { id: 'skills', title: 'Skills' },
       { id: 'projects', title: 'Projects' },
+      { id: 'skills', title: 'Skills' },
+      { id: 'about', title: 'About' },
       { id: 'certifications', title: 'Certifications' },
       { id: 'contact', title: 'Contact' }
     ];
@@ -1382,23 +1277,23 @@
           <div class="flex flex-col gap-4">
             <div class="rounded-xl overflow-hidden border border-slate-800 shadow-md relative bg-slate-950">
               <div class="w-full h-64 sm:h-80 bg-gradient-to-b from-slate-900 to-slate-950 flex items-center justify-center p-3">
-                <img src="assets/voyager-elite/booking-flow.png" onerror="if(this.src!=='https://duykhoi-portfolio.netlify.app/assets/voyager-elite/booking-flow.png')this.src='https://duykhoi-portfolio.netlify.app/assets/voyager-elite/booking-flow.png';" alt="VoyagerElite UI Preview" class="max-w-full max-h-full w-auto h-auto object-contain rounded shadow-lg" />
+                <img src="assets/voyager-elite/booking-flow.webp" onerror="if(this.src!=='https://duykhoi-portfolio.netlify.app/assets/voyager-elite/booking-flow.webp')this.src='https://duykhoi-portfolio.netlify.app/assets/voyager-elite/booking-flow.webp';" alt="VoyagerElite UI Preview" class="max-w-full max-h-full w-auto h-auto object-contain rounded shadow-lg" />
               </div>
               <div class="absolute bottom-2 left-2 bg-slate-900/85 backdrop-blur-xs text-white text-[11px] font-mono px-2.5 py-1 rounded border border-white/10">
                 Cat Ba Escape &bull; Booking &amp; Payment Console (Duy Khôi)
               </div>
             </div>
             <p class="leading-relaxed text-slate-700">
-              A robust web application designed for travel agencies and tourists to discover destinations and book guided tour itineraries. Built with Java Servlet, JSP, MVC architecture, and MySQL database layer.
+              A web application for tourists to discover destinations and book guided tours. Built with Java, Spring MVC, JSP and MySQL on a layered MVC architecture.
             </p>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
               <div class="p-3 rounded-xl bg-blue-50/70 border border-blue-200">
                 <span class="font-mono font-bold text-brand-700 block mb-1 uppercase text-[10px]">Booking Management (Duy Khôi)</span>
-                <span class="text-slate-600 leading-relaxed">Dynamic seat calculation (capacity checks), calendar date range validation, multi-guest pricing aggregation (3,600,000 đ/pax), and booking status lifecycle.</span>
+                <span class="text-slate-600 leading-relaxed">Capacity checks against overbooking, date and input validation, traveler-based price calculation, and the Pending ➔ Confirmed ➔ Completed / Cancelled lifecycle.</span>
               </div>
-              <div class="p-3 rounded-xl bg-cyan-50/70 border border-cyan-200">
-                <span class="font-mono font-bold text-cyan-800 block mb-1 uppercase text-[10px]">Payment Ledger Module (Duy Khôi)</span>
-                <span class="text-slate-600 leading-relaxed">Comprehensive payment record tracking supporting Bank Transfer, Visa card, and E-wallet with relational audit integrity and payment verification.</span>
+              <div class="p-3 rounded-xl bg-blue-50/70 border border-blue-200">
+                <span class="font-mono font-bold text-blue-800 block mb-1 uppercase text-[10px]">Payment Module (Duy Khôi)</span>
+                <span class="text-slate-600 leading-relaxed">Payment records with method (Bank Transfer, Visa card, E-wallet) and status, created in the same transaction as the booking. No external payment gateway.</span>
               </div>
             </div>
             <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 font-mono text-xs text-slate-600">
@@ -1416,22 +1311,22 @@
           <div class="flex flex-col gap-4">
             <div class="rounded-xl overflow-hidden border border-slate-800 shadow-md relative bg-slate-950">
               <div class="w-full h-64 sm:h-80 bg-gradient-to-b from-slate-900 to-slate-950 flex items-center justify-center p-3">
-                <img src="assets/the-chill-rest/menu-management.png" onerror="if(this.src!=='https://duykhoi-portfolio.netlify.app/assets/the-chill-rest/menu-management.png')this.src='https://duykhoi-portfolio.netlify.app/assets/the-chill-rest/menu-management.png';" alt="The Chill Rest UI Preview" class="max-w-full max-h-full w-auto h-auto object-contain rounded shadow-lg" />
+                <img src="assets/the-chill-rest/menu-management.webp" onerror="if(this.src!=='https://duykhoi-portfolio.netlify.app/assets/the-chill-rest/menu-management.webp')this.src='https://duykhoi-portfolio.netlify.app/assets/the-chill-rest/menu-management.webp';" alt="The Chill Rest UI Preview" class="max-w-full max-h-full w-auto h-auto object-contain rounded shadow-lg" />
               </div>
               <div class="absolute bottom-2 left-2 bg-slate-900/85 backdrop-blur-xs text-white text-[11px] font-mono px-2.5 py-1 rounded border border-white/10">
-                The Chill Rest. &bull; Menu Management &amp; DataGrid (Lead by Duy Khôi)
+                The Chill Rest. &bull; Menu Management &amp; DataGrid (Led by Duy Khôi)
               </div>
             </div>
             <p class="leading-relaxed text-slate-700">
               A comprehensive Windows desktop restaurant management and ordering solution developed in C# WinForms with Microsoft SQL Server. Implements a modular 3-tier desktop architecture ensuring separation of concerns and high data integrity.
             </p>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-              <div class="p-3 rounded-xl bg-indigo-50/70 border border-indigo-200">
-                <span class="font-mono font-bold text-indigo-700 block mb-1 uppercase text-[10px]">Menu &amp; Dishes (frmItemManagement)</span>
+              <div class="p-3 rounded-xl bg-blue-50/70 border border-blue-200">
+                <span class="font-mono font-bold text-blue-700 block mb-1 uppercase text-[10px]">Menu &amp; Dishes (frmItemManagement)</span>
                 <span class="text-slate-600 leading-relaxed">Built by Duy Khôi: Full CRUD for dishes and categories, accent-insensitive search via SQL collation, and safe-deletion validation against unpaid active orders.</span>
               </div>
-              <div class="p-3 rounded-xl bg-cyan-50/70 border border-cyan-200">
-                <span class="font-mono font-bold text-cyan-800 block mb-1 uppercase text-[10px]">Revenue Analytics (frmMenuRevenue)</span>
+              <div class="p-3 rounded-xl bg-blue-50/70 border border-blue-200">
+                <span class="font-mono font-bold text-blue-800 block mb-1 uppercase text-[10px]">Revenue Analytics (frmMenuRevenue)</span>
                 <span class="text-slate-600 leading-relaxed">Built by Duy Khôi: Date-range SQL aggregations (SUM/COUNT), dish sales velocity, and automated EPPlus Excel workbook export.</span>
               </div>
             </div>
@@ -1439,8 +1334,8 @@
               <span class="font-bold text-slate-800 block mb-1">3-Tier Desktop Architecture:</span>
               <span>Presentation (WinForms GUI) ➔ Business Logic (BUS/Service) ➔ Data Access (DAL &amp; DTO) ➔ SQL Server 2022</span>
             </div>
-            <div class="p-3 rounded-xl bg-purple-50/80 border border-purple-200 text-xs">
-              <span class="font-mono font-bold text-purple-900 block mb-1 uppercase text-[10px]">Architectural Design Evidence (Duy Khôi)</span>
+            <div class="p-3 rounded-xl bg-slate-50/80 border border-slate-200 text-xs">
+              <span class="font-mono font-bold text-slate-900 block mb-1 uppercase text-[10px]">Architectural Design Evidence (Duy Khôi)</span>
               <span class="text-slate-600">Designed the Relational Database ERD, Class Diagram (DTO/DAO relationships), and Sequence Diagrams for order processing and payment transactions.</span>
             </div>
           </div>
@@ -1466,21 +1361,21 @@
     // --- Interactive Project Image Galleries with Dual Fallback ---
     const galleries = {
       tour: [
-        { src: 'assets/voyager-elite/booking-flow.png', fallback: 'https://duykhoi-portfolio.netlify.app/assets/voyager-elite/booking-flow.png', caption: 'Tour Booking Interface — Form & Dynamic Price (Lead by Duy Khôi)' },
-        { src: 'assets/voyager-elite/booking-management.png', fallback: 'https://duykhoi-portfolio.netlify.app/assets/voyager-elite/booking-management.png', caption: 'Booking Management Console — Status Lifecycle & Filter (Duy Khôi)' },
-        { src: 'assets/voyager-elite/payment-management.png', fallback: 'https://duykhoi-portfolio.netlify.app/assets/voyager-elite/payment-management.png', caption: 'Payment Management Console — Audit Records & Verification (Duy Khôi)' },
-        { src: 'assets/voyager-elite/home-page.png', fallback: 'https://duykhoi-portfolio.netlify.app/assets/voyager-elite/home-page.png', caption: 'VoyagerElite Travel Portal — Destination Discovery' },
-        { src: 'assets/voyager-elite/tour-detail.png', fallback: 'https://duykhoi-portfolio.netlify.app/assets/voyager-elite/tour-detail.png', caption: 'Tour Detail & Itinerary Schedule' },
-        { src: 'assets/voyager-elite/booking-history.png', fallback: 'https://duykhoi-portfolio.netlify.app/assets/voyager-elite/booking-history.png', caption: 'Customer Booking History Portal' }
+        { src: 'assets/voyager-elite/booking-flow.webp', fallback: 'https://duykhoi-portfolio.netlify.app/assets/voyager-elite/booking-flow.webp', caption: 'Tour Booking Interface — Form & Dynamic Price (Led by Duy Khôi)' },
+        { src: 'assets/voyager-elite/booking-management.webp', fallback: 'https://duykhoi-portfolio.netlify.app/assets/voyager-elite/booking-management.webp', caption: 'Booking Management Console — Status Lifecycle & Filter (Duy Khôi)' },
+        { src: 'assets/voyager-elite/payment-management.webp', fallback: 'https://duykhoi-portfolio.netlify.app/assets/voyager-elite/payment-management.webp', caption: 'Payment Management Console — Payment Records & Status (Duy Khôi)' },
+        { src: 'assets/voyager-elite/home-page.webp', fallback: 'https://duykhoi-portfolio.netlify.app/assets/voyager-elite/home-page.webp', caption: 'VoyagerElite Travel Portal — Destination Discovery' },
+        { src: 'assets/voyager-elite/tour-detail.webp', fallback: 'https://duykhoi-portfolio.netlify.app/assets/voyager-elite/tour-detail.webp', caption: 'Tour Detail & Itinerary Schedule' },
+        { src: 'assets/voyager-elite/booking-history.webp', fallback: 'https://duykhoi-portfolio.netlify.app/assets/voyager-elite/booking-history.webp', caption: 'Customer Booking History Portal' }
       ],
       restaurant: [
-        { src: 'assets/the-chill-rest/menu-management.png', fallback: 'https://duykhoi-portfolio.netlify.app/assets/the-chill-rest/menu-management.png', caption: 'Menu Management (frmItemManagement) — Live DataGrid & Search (Lead by Duy Khôi)' },
-        { src: 'assets/the-chill-rest/food-detail.png', fallback: 'https://duykhoi-portfolio.netlify.app/assets/the-chill-rest/food-detail.png', caption: 'Food Detail & Category Dialog (frmFoodDetail) — Input Validation (Duy Khôi)' },
-        { src: 'assets/the-chill-rest/revenue-report.png', fallback: 'https://duykhoi-portfolio.netlify.app/assets/the-chill-rest/revenue-report.png', caption: 'Revenue Analysis & Reports (frmMenuRevenue) — Sales Velocity (Duy Khôi)' },
-        { src: 'assets/the-chill-rest/pos-dashboard.png', fallback: 'https://duykhoi-portfolio.netlify.app/assets/the-chill-rest/pos-dashboard.png', caption: 'Restaurant POS Dashboard — Table Layout & Real-time Orders' },
-        { src: 'assets/the-chill-rest/class-diagram.png', fallback: 'https://duykhoi-portfolio.netlify.app/assets/the-chill-rest/class-diagram.png', caption: 'System Class Diagram & Data Transfer Architecture (Designed by Duy Khôi)' },
-        { src: 'assets/the-chill-rest/sequence-diagram.png', fallback: 'https://duykhoi-portfolio.netlify.app/assets/the-chill-rest/sequence-diagram.png', caption: 'Sequence Diagram for Order & Payment Lifecycle (Designed by Duy Khôi)' },
-        { src: 'assets/the-chill-rest/erd-diagram.png', fallback: 'https://duykhoi-portfolio.netlify.app/assets/the-chill-rest/erd-diagram.png', caption: 'SQL Server Relational ERD Schema (Designed by Duy Khôi)' }
+        { src: 'assets/the-chill-rest/menu-management.webp', fallback: 'https://duykhoi-portfolio.netlify.app/assets/the-chill-rest/menu-management.webp', caption: 'Menu Management (frmItemManagement) — Live DataGrid & Search (Led by Duy Khôi)' },
+        { src: 'assets/the-chill-rest/food-detail.webp', fallback: 'https://duykhoi-portfolio.netlify.app/assets/the-chill-rest/food-detail.webp', caption: 'Food Detail & Category Dialog (frmFoodDetail) — Input Validation (Duy Khôi)' },
+        { src: 'assets/the-chill-rest/revenue-report.webp', fallback: 'https://duykhoi-portfolio.netlify.app/assets/the-chill-rest/revenue-report.webp', caption: 'Revenue Analysis & Reports (frmMenuRevenue) — Sales Velocity (Duy Khôi)' },
+        { src: 'assets/the-chill-rest/pos-dashboard.webp', fallback: 'https://duykhoi-portfolio.netlify.app/assets/the-chill-rest/pos-dashboard.webp', caption: 'Restaurant POS Dashboard — Table Layout & Orders' },
+        { src: 'assets/the-chill-rest/class-diagram.webp', fallback: 'https://duykhoi-portfolio.netlify.app/assets/the-chill-rest/class-diagram.webp', caption: 'System Class Diagram & Data Transfer Architecture (Designed by Duy Khôi)' },
+        { src: 'assets/the-chill-rest/sequence-diagram.webp', fallback: 'https://duykhoi-portfolio.netlify.app/assets/the-chill-rest/sequence-diagram.webp', caption: 'Sequence Diagram for Order & Payment Lifecycle (Designed by Duy Khôi)' },
+        { src: 'assets/the-chill-rest/erd-diagram.webp', fallback: 'https://duykhoi-portfolio.netlify.app/assets/the-chill-rest/erd-diagram.webp', caption: 'SQL Server Relational ERD Schema (Designed by Duy Khôi)' }
       ]
     };
 
@@ -1513,7 +1408,7 @@
       if (countEl) countEl.textContent = `${index + 1} / ${list.length}`;
 
       const dots = document.querySelectorAll(`.${project}-dot`);
-      const activeColor = project === 'tour' ? 'bg-brand-500' : 'bg-cyan-400';
+      const activeColor = project === 'tour' ? 'bg-brand-500' : 'bg-blue-400';
       dots.forEach((dot, idx) => {
         if (idx === index) {
           dot.className = `${project}-dot w-5 h-1.5 rounded-full ${activeColor} transition-all cursor-pointer`;
@@ -1600,9 +1495,9 @@
     // --- Typewriter Animation ---
     const typewriterPhrases = [
       "Java Backend Developer Intern",
-      "Spring MVC & RESTful API Developer",
-      "Database Designer (MySQL & SQL Server)",
-      "3-Tier Desktop Architecture Engineer"
+      "Spring MVC & MySQL",
+      "Relational Database Design",
+      "Layered Architecture (Controller–Service–DAO)"
     ];
     let phraseIndex = 0;
     let charIndex = typewriterPhrases[0].length;
