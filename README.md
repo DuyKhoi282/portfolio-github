@@ -48,7 +48,7 @@ Looking for a **full-time Java Backend internship** where I can build production
 ## Featured Projects
 
 ### 1. VoyagerElite — Travel Tour Booking System
-> **Academic group project** • Role: *Booking & Payment Module Developer*
+> **Academic group project** • Role: *Booking & Payment Module Developer*\
 > **Source code:** [vannld23/travel-tour-booking-system](https://github.com/vannld23/travel-tour-booking-system)
 
 <div align="center">
@@ -67,7 +67,7 @@ Looking for a **full-time Java Backend internship** where I can build production
 ---
 
 ### 2. The Chill Rest. — Restaurant Management App
-> **Academic group project** • Role: *Database Design, Menu Management & Revenue Report*
+> **Academic group project** • Role: *Database Design, Menu Management & Revenue Report*\
 > **Source code:** [DuyKhoi282/Restaurant-App](https://github.com/DuyKhoi282/Restaurant-App)
 
 <div align="center">
